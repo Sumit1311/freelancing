@@ -1,0 +1,1589 @@
+Terminals unused in grammar
+
+   KEYWORD_NAME
+   POWER_OP
+   SHIFT_OP
+   B_AND
+   B_OR
+   B_NOT
+   B_XOR
+   FACTOR_OP
+
+
+Grammar
+
+    0 $accept: single_input $end
+
+    1 single_input: %empty
+    2             | NEWLINE
+    3             | compound_stmt NEWLINE
+    4             | simple_stmt
+
+    5 simple_stmt: small_stmt NEWLINE
+    6            | small_stmt SEMICOLON
+
+    7 small_stmt: expr_stmt
+    8           | print_stmt
+
+    9 print_stmt: PRINT
+   10           | PRINT test
+
+   11 expr_stmt: test
+   12          | test EQUAL_TO expr_stmt
+
+   13 test: or_test
+
+   14 or_test: and_test OR or_test
+   15        | and_test
+
+   16 and_test: not_test AND and_test
+   17         | not_test
+
+   18 not_test: NOT not_test
+   19         | comparison
+
+   20 comparison: expr comp_op comparison
+   21           | expr
+
+   22 comp_op: COMP_OP
+
+   23 expr: arith_expr
+
+   24 arith_expr: term arith_l_op arith_expr
+   25           | term
+
+   26 arith_l_op: ARITH_L_OP
+
+   27 term: atom arith_h_op term
+   28     | atom
+
+   29 arith_h_op: ARITH_H_OP
+
+   30 atom: VARIABLE_NAME
+   31     | INTEGER
+   32     | FLOAT
+   33     | OPEN_PARAN testlist_comp CLOSE_PARAN
+   34     | STRING
+   35     | TRUE
+   36     | FALSE
+
+   37 testlist_comp: test
+
+   38 compound_stmt: if_stmt
+   39              | while_stmt
+
+   40 if_stmt: proto_if_stmt
+   41        | proto_if_stmt ELSE COLON suite
+
+   42 proto_if_stmt: IF test COLON suite
+   43              | proto_if_stmt ELIF test COLON suite
+
+   44 while_stmt: WHILE test COLON suite
+
+   45 suite: simple_stmt
+   46      | NEWLINE BEGIN_INDENT stmt_rec END_INDENT
+
+   47 stmt: simple_stmt
+   48     | compound_stmt
+
+   49 stmt_rec: stmt
+   50         | stmt_rec stmt
+
+
+Terminals, with rules where they appear
+
+$end (0) 0
+error (256)
+VARIABLE_NAME (258) 30
+INTEGER (259) 31
+FLOAT (260) 32
+TRUE (261) 35
+FALSE (262) 36
+STRING (263) 34
+NEWLINE (264) 2 3 5 46
+SEMICOLON (265) 6
+BEGIN_INDENT (266) 46
+END_INDENT (267) 46
+WHILE (268) 44
+ELIF (269) 43
+KEYWORD_NAME (270)
+ARITH_H_OP (271) 29
+ARITH_L_OP (272) 26
+COMP_OP (273) 22
+EQUAL_TO (274) 12
+IF (275) 42
+ELSE (276) 41
+AND (277) 16
+OR (278) 14
+NOT (279) 18
+POWER_OP (280)
+SHIFT_OP (281)
+B_AND (282)
+B_OR (283)
+B_NOT (284)
+B_XOR (285)
+FACTOR_OP (286)
+OPEN_PARAN (287) 33
+CLOSE_PARAN (288) 33
+COLON (289) 41 42 43 44
+PRINT (290) 9 10
+
+
+Nonterminals, with rules where they appear
+
+$accept (36)
+    on left: 0
+single_input (37)
+    on left: 1 2 3 4, on right: 0
+simple_stmt (38)
+    on left: 5 6, on right: 4 45 47
+small_stmt (39)
+    on left: 7 8, on right: 5 6
+print_stmt (40)
+    on left: 9 10, on right: 8
+expr_stmt (41)
+    on left: 11 12, on right: 7 12
+test (42)
+    on left: 13, on right: 10 11 12 37 42 43 44
+or_test (43)
+    on left: 14 15, on right: 13 14
+and_test (44)
+    on left: 16 17, on right: 14 15 16
+not_test (45)
+    on left: 18 19, on right: 16 17 18
+comparison (46)
+    on left: 20 21, on right: 19 20
+comp_op (47)
+    on left: 22, on right: 20
+expr (48)
+    on left: 23, on right: 20 21
+arith_expr (49)
+    on left: 24 25, on right: 23 24
+arith_l_op (50)
+    on left: 26, on right: 24
+term (51)
+    on left: 27 28, on right: 24 25 27
+arith_h_op (52)
+    on left: 29, on right: 27
+atom (53)
+    on left: 30 31 32 33 34 35 36, on right: 27 28
+testlist_comp (54)
+    on left: 37, on right: 33
+compound_stmt (55)
+    on left: 38 39, on right: 3 48
+if_stmt (56)
+    on left: 40 41, on right: 38
+proto_if_stmt (57)
+    on left: 42 43, on right: 40 41 43
+while_stmt (58)
+    on left: 44, on right: 39
+suite (59)
+    on left: 45 46, on right: 41 42 43 44
+stmt (60)
+    on left: 47 48, on right: 49 50
+stmt_rec (61)
+    on left: 49 50, on right: 46 50
+
+
+State 0
+
+    0 $accept: . single_input $end
+    1 single_input: . %empty  [$end]
+    2             | . NEWLINE
+    3             | . compound_stmt NEWLINE
+    4             | . simple_stmt
+    5 simple_stmt: . small_stmt NEWLINE
+    6            | . small_stmt SEMICOLON
+    7 small_stmt: . expr_stmt
+    8           | . print_stmt
+    9 print_stmt: . PRINT
+   10           | . PRINT test
+   11 expr_stmt: . test
+   12          | . test EQUAL_TO expr_stmt
+   13 test: . or_test
+   14 or_test: . and_test OR or_test
+   15        | . and_test
+   16 and_test: . not_test AND and_test
+   17         | . not_test
+   18 not_test: . NOT not_test
+   19         | . comparison
+   20 comparison: . expr comp_op comparison
+   21           | . expr
+   23 expr: . arith_expr
+   24 arith_expr: . term arith_l_op arith_expr
+   25           | . term
+   27 term: . atom arith_h_op term
+   28     | . atom
+   30 atom: . VARIABLE_NAME
+   31     | . INTEGER
+   32     | . FLOAT
+   33     | . OPEN_PARAN testlist_comp CLOSE_PARAN
+   34     | . STRING
+   35     | . TRUE
+   36     | . FALSE
+   38 compound_stmt: . if_stmt
+   39              | . while_stmt
+   40 if_stmt: . proto_if_stmt
+   41        | . proto_if_stmt ELSE COLON suite
+   42 proto_if_stmt: . IF test COLON suite
+   43              | . proto_if_stmt ELIF test COLON suite
+   44 while_stmt: . WHILE test COLON suite
+
+    VARIABLE_NAME  shift, and go to state 1
+    INTEGER        shift, and go to state 2
+    FLOAT          shift, and go to state 3
+    TRUE           shift, and go to state 4
+    FALSE          shift, and go to state 5
+    STRING         shift, and go to state 6
+    NEWLINE        shift, and go to state 7
+    WHILE          shift, and go to state 8
+    IF             shift, and go to state 9
+    NOT            shift, and go to state 10
+    OPEN_PARAN     shift, and go to state 11
+    PRINT          shift, and go to state 12
+
+    $default  reduce using rule 1 (single_input)
+
+    single_input   go to state 13
+    simple_stmt    go to state 14
+    small_stmt     go to state 15
+    print_stmt     go to state 16
+    expr_stmt      go to state 17
+    test           go to state 18
+    or_test        go to state 19
+    and_test       go to state 20
+    not_test       go to state 21
+    comparison     go to state 22
+    expr           go to state 23
+    arith_expr     go to state 24
+    term           go to state 25
+    atom           go to state 26
+    compound_stmt  go to state 27
+    if_stmt        go to state 28
+    proto_if_stmt  go to state 29
+    while_stmt     go to state 30
+
+
+State 1
+
+   30 atom: VARIABLE_NAME .
+
+    $default  reduce using rule 30 (atom)
+
+
+State 2
+
+   31 atom: INTEGER .
+
+    $default  reduce using rule 31 (atom)
+
+
+State 3
+
+   32 atom: FLOAT .
+
+    $default  reduce using rule 32 (atom)
+
+
+State 4
+
+   35 atom: TRUE .
+
+    $default  reduce using rule 35 (atom)
+
+
+State 5
+
+   36 atom: FALSE .
+
+    $default  reduce using rule 36 (atom)
+
+
+State 6
+
+   34 atom: STRING .
+
+    $default  reduce using rule 34 (atom)
+
+
+State 7
+
+    2 single_input: NEWLINE .
+
+    $default  reduce using rule 2 (single_input)
+
+
+State 8
+
+   13 test: . or_test
+   14 or_test: . and_test OR or_test
+   15        | . and_test
+   16 and_test: . not_test AND and_test
+   17         | . not_test
+   18 not_test: . NOT not_test
+   19         | . comparison
+   20 comparison: . expr comp_op comparison
+   21           | . expr
+   23 expr: . arith_expr
+   24 arith_expr: . term arith_l_op arith_expr
+   25           | . term
+   27 term: . atom arith_h_op term
+   28     | . atom
+   30 atom: . VARIABLE_NAME
+   31     | . INTEGER
+   32     | . FLOAT
+   33     | . OPEN_PARAN testlist_comp CLOSE_PARAN
+   34     | . STRING
+   35     | . TRUE
+   36     | . FALSE
+   44 while_stmt: WHILE . test COLON suite
+
+    VARIABLE_NAME  shift, and go to state 1
+    INTEGER        shift, and go to state 2
+    FLOAT          shift, and go to state 3
+    TRUE           shift, and go to state 4
+    FALSE          shift, and go to state 5
+    STRING         shift, and go to state 6
+    NOT            shift, and go to state 10
+    OPEN_PARAN     shift, and go to state 11
+
+    test        go to state 31
+    or_test     go to state 19
+    and_test    go to state 20
+    not_test    go to state 21
+    comparison  go to state 22
+    expr        go to state 23
+    arith_expr  go to state 24
+    term        go to state 25
+    atom        go to state 26
+
+
+State 9
+
+   13 test: . or_test
+   14 or_test: . and_test OR or_test
+   15        | . and_test
+   16 and_test: . not_test AND and_test
+   17         | . not_test
+   18 not_test: . NOT not_test
+   19         | . comparison
+   20 comparison: . expr comp_op comparison
+   21           | . expr
+   23 expr: . arith_expr
+   24 arith_expr: . term arith_l_op arith_expr
+   25           | . term
+   27 term: . atom arith_h_op term
+   28     | . atom
+   30 atom: . VARIABLE_NAME
+   31     | . INTEGER
+   32     | . FLOAT
+   33     | . OPEN_PARAN testlist_comp CLOSE_PARAN
+   34     | . STRING
+   35     | . TRUE
+   36     | . FALSE
+   42 proto_if_stmt: IF . test COLON suite
+
+    VARIABLE_NAME  shift, and go to state 1
+    INTEGER        shift, and go to state 2
+    FLOAT          shift, and go to state 3
+    TRUE           shift, and go to state 4
+    FALSE          shift, and go to state 5
+    STRING         shift, and go to state 6
+    NOT            shift, and go to state 10
+    OPEN_PARAN     shift, and go to state 11
+
+    test        go to state 32
+    or_test     go to state 19
+    and_test    go to state 20
+    not_test    go to state 21
+    comparison  go to state 22
+    expr        go to state 23
+    arith_expr  go to state 24
+    term        go to state 25
+    atom        go to state 26
+
+
+State 10
+
+   18 not_test: . NOT not_test
+   18         | NOT . not_test
+   19         | . comparison
+   20 comparison: . expr comp_op comparison
+   21           | . expr
+   23 expr: . arith_expr
+   24 arith_expr: . term arith_l_op arith_expr
+   25           | . term
+   27 term: . atom arith_h_op term
+   28     | . atom
+   30 atom: . VARIABLE_NAME
+   31     | . INTEGER
+   32     | . FLOAT
+   33     | . OPEN_PARAN testlist_comp CLOSE_PARAN
+   34     | . STRING
+   35     | . TRUE
+   36     | . FALSE
+
+    VARIABLE_NAME  shift, and go to state 1
+    INTEGER        shift, and go to state 2
+    FLOAT          shift, and go to state 3
+    TRUE           shift, and go to state 4
+    FALSE          shift, and go to state 5
+    STRING         shift, and go to state 6
+    NOT            shift, and go to state 10
+    OPEN_PARAN     shift, and go to state 11
+
+    not_test    go to state 33
+    comparison  go to state 22
+    expr        go to state 23
+    arith_expr  go to state 24
+    term        go to state 25
+    atom        go to state 26
+
+
+State 11
+
+   13 test: . or_test
+   14 or_test: . and_test OR or_test
+   15        | . and_test
+   16 and_test: . not_test AND and_test
+   17         | . not_test
+   18 not_test: . NOT not_test
+   19         | . comparison
+   20 comparison: . expr comp_op comparison
+   21           | . expr
+   23 expr: . arith_expr
+   24 arith_expr: . term arith_l_op arith_expr
+   25           | . term
+   27 term: . atom arith_h_op term
+   28     | . atom
+   30 atom: . VARIABLE_NAME
+   31     | . INTEGER
+   32     | . FLOAT
+   33     | . OPEN_PARAN testlist_comp CLOSE_PARAN
+   33     | OPEN_PARAN . testlist_comp CLOSE_PARAN
+   34     | . STRING
+   35     | . TRUE
+   36     | . FALSE
+   37 testlist_comp: . test
+
+    VARIABLE_NAME  shift, and go to state 1
+    INTEGER        shift, and go to state 2
+    FLOAT          shift, and go to state 3
+    TRUE           shift, and go to state 4
+    FALSE          shift, and go to state 5
+    STRING         shift, and go to state 6
+    NOT            shift, and go to state 10
+    OPEN_PARAN     shift, and go to state 11
+
+    test           go to state 34
+    or_test        go to state 19
+    and_test       go to state 20
+    not_test       go to state 21
+    comparison     go to state 22
+    expr           go to state 23
+    arith_expr     go to state 24
+    term           go to state 25
+    atom           go to state 26
+    testlist_comp  go to state 35
+
+
+State 12
+
+    9 print_stmt: PRINT .  [NEWLINE, SEMICOLON]
+   10           | PRINT . test
+   13 test: . or_test
+   14 or_test: . and_test OR or_test
+   15        | . and_test
+   16 and_test: . not_test AND and_test
+   17         | . not_test
+   18 not_test: . NOT not_test
+   19         | . comparison
+   20 comparison: . expr comp_op comparison
+   21           | . expr
+   23 expr: . arith_expr
+   24 arith_expr: . term arith_l_op arith_expr
+   25           | . term
+   27 term: . atom arith_h_op term
+   28     | . atom
+   30 atom: . VARIABLE_NAME
+   31     | . INTEGER
+   32     | . FLOAT
+   33     | . OPEN_PARAN testlist_comp CLOSE_PARAN
+   34     | . STRING
+   35     | . TRUE
+   36     | . FALSE
+
+    VARIABLE_NAME  shift, and go to state 1
+    INTEGER        shift, and go to state 2
+    FLOAT          shift, and go to state 3
+    TRUE           shift, and go to state 4
+    FALSE          shift, and go to state 5
+    STRING         shift, and go to state 6
+    NOT            shift, and go to state 10
+    OPEN_PARAN     shift, and go to state 11
+
+    $default  reduce using rule 9 (print_stmt)
+
+    test        go to state 36
+    or_test     go to state 19
+    and_test    go to state 20
+    not_test    go to state 21
+    comparison  go to state 22
+    expr        go to state 23
+    arith_expr  go to state 24
+    term        go to state 25
+    atom        go to state 26
+
+
+State 13
+
+    0 $accept: single_input . $end
+
+    $end  shift, and go to state 37
+
+
+State 14
+
+    4 single_input: simple_stmt .
+
+    $default  reduce using rule 4 (single_input)
+
+
+State 15
+
+    5 simple_stmt: small_stmt . NEWLINE
+    6            | small_stmt . SEMICOLON
+
+    NEWLINE    shift, and go to state 38
+    SEMICOLON  shift, and go to state 39
+
+
+State 16
+
+    8 small_stmt: print_stmt .
+
+    $default  reduce using rule 8 (small_stmt)
+
+
+State 17
+
+    7 small_stmt: expr_stmt .
+
+    $default  reduce using rule 7 (small_stmt)
+
+
+State 18
+
+   11 expr_stmt: test .  [NEWLINE, SEMICOLON]
+   12          | test . EQUAL_TO expr_stmt
+
+    EQUAL_TO  shift, and go to state 40
+
+    $default  reduce using rule 11 (expr_stmt)
+
+
+State 19
+
+   13 test: or_test .
+
+    $default  reduce using rule 13 (test)
+
+
+State 20
+
+   14 or_test: and_test . OR or_test
+   15        | and_test .  [NEWLINE, SEMICOLON, EQUAL_TO, CLOSE_PARAN, COLON]
+
+    OR  shift, and go to state 41
+
+    $default  reduce using rule 15 (or_test)
+
+
+State 21
+
+   16 and_test: not_test . AND and_test
+   17         | not_test .  [NEWLINE, SEMICOLON, EQUAL_TO, OR, CLOSE_PARAN, COLON]
+
+    AND  shift, and go to state 42
+
+    $default  reduce using rule 17 (and_test)
+
+
+State 22
+
+   19 not_test: comparison .
+
+    $default  reduce using rule 19 (not_test)
+
+
+State 23
+
+   20 comparison: expr . comp_op comparison
+   21           | expr .  [NEWLINE, SEMICOLON, EQUAL_TO, AND, OR, CLOSE_PARAN, COLON]
+   22 comp_op: . COMP_OP
+
+    COMP_OP  shift, and go to state 43
+
+    $default  reduce using rule 21 (comparison)
+
+    comp_op  go to state 44
+
+
+State 24
+
+   23 expr: arith_expr .
+
+    $default  reduce using rule 23 (expr)
+
+
+State 25
+
+   24 arith_expr: term . arith_l_op arith_expr
+   25           | term .  [NEWLINE, SEMICOLON, COMP_OP, EQUAL_TO, AND, OR, CLOSE_PARAN, COLON]
+   26 arith_l_op: . ARITH_L_OP
+
+    ARITH_L_OP  shift, and go to state 45
+
+    $default  reduce using rule 25 (arith_expr)
+
+    arith_l_op  go to state 46
+
+
+State 26
+
+   27 term: atom . arith_h_op term
+   28     | atom .  [NEWLINE, SEMICOLON, ARITH_L_OP, COMP_OP, EQUAL_TO, AND, OR, CLOSE_PARAN, COLON]
+   29 arith_h_op: . ARITH_H_OP
+
+    ARITH_H_OP  shift, and go to state 47
+
+    $default  reduce using rule 28 (term)
+
+    arith_h_op  go to state 48
+
+
+State 27
+
+    3 single_input: compound_stmt . NEWLINE
+
+    NEWLINE  shift, and go to state 49
+
+
+State 28
+
+   38 compound_stmt: if_stmt .
+
+    $default  reduce using rule 38 (compound_stmt)
+
+
+State 29
+
+   40 if_stmt: proto_if_stmt .  [VARIABLE_NAME, INTEGER, FLOAT, TRUE, FALSE, STRING, NEWLINE, END_INDENT, WHILE, IF, NOT, OPEN_PARAN, PRINT]
+   41        | proto_if_stmt . ELSE COLON suite
+   43 proto_if_stmt: proto_if_stmt . ELIF test COLON suite
+
+    ELIF  shift, and go to state 50
+    ELSE  shift, and go to state 51
+
+    $default  reduce using rule 40 (if_stmt)
+
+
+State 30
+
+   39 compound_stmt: while_stmt .
+
+    $default  reduce using rule 39 (compound_stmt)
+
+
+State 31
+
+   44 while_stmt: WHILE test . COLON suite
+
+    COLON  shift, and go to state 52
+
+
+State 32
+
+   42 proto_if_stmt: IF test . COLON suite
+
+    COLON  shift, and go to state 53
+
+
+State 33
+
+   18 not_test: NOT not_test .
+
+    $default  reduce using rule 18 (not_test)
+
+
+State 34
+
+   37 testlist_comp: test .
+
+    $default  reduce using rule 37 (testlist_comp)
+
+
+State 35
+
+   33 atom: OPEN_PARAN testlist_comp . CLOSE_PARAN
+
+    CLOSE_PARAN  shift, and go to state 54
+
+
+State 36
+
+   10 print_stmt: PRINT test .
+
+    $default  reduce using rule 10 (print_stmt)
+
+
+State 37
+
+    0 $accept: single_input $end .
+
+    $default  accept
+
+
+State 38
+
+    5 simple_stmt: small_stmt NEWLINE .
+
+    $default  reduce using rule 5 (simple_stmt)
+
+
+State 39
+
+    6 simple_stmt: small_stmt SEMICOLON .
+
+    $default  reduce using rule 6 (simple_stmt)
+
+
+State 40
+
+   11 expr_stmt: . test
+   12          | . test EQUAL_TO expr_stmt
+   12          | test EQUAL_TO . expr_stmt
+   13 test: . or_test
+   14 or_test: . and_test OR or_test
+   15        | . and_test
+   16 and_test: . not_test AND and_test
+   17         | . not_test
+   18 not_test: . NOT not_test
+   19         | . comparison
+   20 comparison: . expr comp_op comparison
+   21           | . expr
+   23 expr: . arith_expr
+   24 arith_expr: . term arith_l_op arith_expr
+   25           | . term
+   27 term: . atom arith_h_op term
+   28     | . atom
+   30 atom: . VARIABLE_NAME
+   31     | . INTEGER
+   32     | . FLOAT
+   33     | . OPEN_PARAN testlist_comp CLOSE_PARAN
+   34     | . STRING
+   35     | . TRUE
+   36     | . FALSE
+
+    VARIABLE_NAME  shift, and go to state 1
+    INTEGER        shift, and go to state 2
+    FLOAT          shift, and go to state 3
+    TRUE           shift, and go to state 4
+    FALSE          shift, and go to state 5
+    STRING         shift, and go to state 6
+    NOT            shift, and go to state 10
+    OPEN_PARAN     shift, and go to state 11
+
+    expr_stmt   go to state 55
+    test        go to state 18
+    or_test     go to state 19
+    and_test    go to state 20
+    not_test    go to state 21
+    comparison  go to state 22
+    expr        go to state 23
+    arith_expr  go to state 24
+    term        go to state 25
+    atom        go to state 26
+
+
+State 41
+
+   14 or_test: . and_test OR or_test
+   14        | and_test OR . or_test
+   15        | . and_test
+   16 and_test: . not_test AND and_test
+   17         | . not_test
+   18 not_test: . NOT not_test
+   19         | . comparison
+   20 comparison: . expr comp_op comparison
+   21           | . expr
+   23 expr: . arith_expr
+   24 arith_expr: . term arith_l_op arith_expr
+   25           | . term
+   27 term: . atom arith_h_op term
+   28     | . atom
+   30 atom: . VARIABLE_NAME
+   31     | . INTEGER
+   32     | . FLOAT
+   33     | . OPEN_PARAN testlist_comp CLOSE_PARAN
+   34     | . STRING
+   35     | . TRUE
+   36     | . FALSE
+
+    VARIABLE_NAME  shift, and go to state 1
+    INTEGER        shift, and go to state 2
+    FLOAT          shift, and go to state 3
+    TRUE           shift, and go to state 4
+    FALSE          shift, and go to state 5
+    STRING         shift, and go to state 6
+    NOT            shift, and go to state 10
+    OPEN_PARAN     shift, and go to state 11
+
+    or_test     go to state 56
+    and_test    go to state 20
+    not_test    go to state 21
+    comparison  go to state 22
+    expr        go to state 23
+    arith_expr  go to state 24
+    term        go to state 25
+    atom        go to state 26
+
+
+State 42
+
+   16 and_test: . not_test AND and_test
+   16         | not_test AND . and_test
+   17         | . not_test
+   18 not_test: . NOT not_test
+   19         | . comparison
+   20 comparison: . expr comp_op comparison
+   21           | . expr
+   23 expr: . arith_expr
+   24 arith_expr: . term arith_l_op arith_expr
+   25           | . term
+   27 term: . atom arith_h_op term
+   28     | . atom
+   30 atom: . VARIABLE_NAME
+   31     | . INTEGER
+   32     | . FLOAT
+   33     | . OPEN_PARAN testlist_comp CLOSE_PARAN
+   34     | . STRING
+   35     | . TRUE
+   36     | . FALSE
+
+    VARIABLE_NAME  shift, and go to state 1
+    INTEGER        shift, and go to state 2
+    FLOAT          shift, and go to state 3
+    TRUE           shift, and go to state 4
+    FALSE          shift, and go to state 5
+    STRING         shift, and go to state 6
+    NOT            shift, and go to state 10
+    OPEN_PARAN     shift, and go to state 11
+
+    and_test    go to state 57
+    not_test    go to state 21
+    comparison  go to state 22
+    expr        go to state 23
+    arith_expr  go to state 24
+    term        go to state 25
+    atom        go to state 26
+
+
+State 43
+
+   22 comp_op: COMP_OP .
+
+    $default  reduce using rule 22 (comp_op)
+
+
+State 44
+
+   20 comparison: . expr comp_op comparison
+   20           | expr comp_op . comparison
+   21           | . expr
+   23 expr: . arith_expr
+   24 arith_expr: . term arith_l_op arith_expr
+   25           | . term
+   27 term: . atom arith_h_op term
+   28     | . atom
+   30 atom: . VARIABLE_NAME
+   31     | . INTEGER
+   32     | . FLOAT
+   33     | . OPEN_PARAN testlist_comp CLOSE_PARAN
+   34     | . STRING
+   35     | . TRUE
+   36     | . FALSE
+
+    VARIABLE_NAME  shift, and go to state 1
+    INTEGER        shift, and go to state 2
+    FLOAT          shift, and go to state 3
+    TRUE           shift, and go to state 4
+    FALSE          shift, and go to state 5
+    STRING         shift, and go to state 6
+    OPEN_PARAN     shift, and go to state 11
+
+    comparison  go to state 58
+    expr        go to state 23
+    arith_expr  go to state 24
+    term        go to state 25
+    atom        go to state 26
+
+
+State 45
+
+   26 arith_l_op: ARITH_L_OP .
+
+    $default  reduce using rule 26 (arith_l_op)
+
+
+State 46
+
+   24 arith_expr: . term arith_l_op arith_expr
+   24           | term arith_l_op . arith_expr
+   25           | . term
+   27 term: . atom arith_h_op term
+   28     | . atom
+   30 atom: . VARIABLE_NAME
+   31     | . INTEGER
+   32     | . FLOAT
+   33     | . OPEN_PARAN testlist_comp CLOSE_PARAN
+   34     | . STRING
+   35     | . TRUE
+   36     | . FALSE
+
+    VARIABLE_NAME  shift, and go to state 1
+    INTEGER        shift, and go to state 2
+    FLOAT          shift, and go to state 3
+    TRUE           shift, and go to state 4
+    FALSE          shift, and go to state 5
+    STRING         shift, and go to state 6
+    OPEN_PARAN     shift, and go to state 11
+
+    arith_expr  go to state 59
+    term        go to state 25
+    atom        go to state 26
+
+
+State 47
+
+   29 arith_h_op: ARITH_H_OP .
+
+    $default  reduce using rule 29 (arith_h_op)
+
+
+State 48
+
+   27 term: . atom arith_h_op term
+   27     | atom arith_h_op . term
+   28     | . atom
+   30 atom: . VARIABLE_NAME
+   31     | . INTEGER
+   32     | . FLOAT
+   33     | . OPEN_PARAN testlist_comp CLOSE_PARAN
+   34     | . STRING
+   35     | . TRUE
+   36     | . FALSE
+
+    VARIABLE_NAME  shift, and go to state 1
+    INTEGER        shift, and go to state 2
+    FLOAT          shift, and go to state 3
+    TRUE           shift, and go to state 4
+    FALSE          shift, and go to state 5
+    STRING         shift, and go to state 6
+    OPEN_PARAN     shift, and go to state 11
+
+    term  go to state 60
+    atom  go to state 26
+
+
+State 49
+
+    3 single_input: compound_stmt NEWLINE .
+
+    $default  reduce using rule 3 (single_input)
+
+
+State 50
+
+   13 test: . or_test
+   14 or_test: . and_test OR or_test
+   15        | . and_test
+   16 and_test: . not_test AND and_test
+   17         | . not_test
+   18 not_test: . NOT not_test
+   19         | . comparison
+   20 comparison: . expr comp_op comparison
+   21           | . expr
+   23 expr: . arith_expr
+   24 arith_expr: . term arith_l_op arith_expr
+   25           | . term
+   27 term: . atom arith_h_op term
+   28     | . atom
+   30 atom: . VARIABLE_NAME
+   31     | . INTEGER
+   32     | . FLOAT
+   33     | . OPEN_PARAN testlist_comp CLOSE_PARAN
+   34     | . STRING
+   35     | . TRUE
+   36     | . FALSE
+   43 proto_if_stmt: proto_if_stmt ELIF . test COLON suite
+
+    VARIABLE_NAME  shift, and go to state 1
+    INTEGER        shift, and go to state 2
+    FLOAT          shift, and go to state 3
+    TRUE           shift, and go to state 4
+    FALSE          shift, and go to state 5
+    STRING         shift, and go to state 6
+    NOT            shift, and go to state 10
+    OPEN_PARAN     shift, and go to state 11
+
+    test        go to state 61
+    or_test     go to state 19
+    and_test    go to state 20
+    not_test    go to state 21
+    comparison  go to state 22
+    expr        go to state 23
+    arith_expr  go to state 24
+    term        go to state 25
+    atom        go to state 26
+
+
+State 51
+
+   41 if_stmt: proto_if_stmt ELSE . COLON suite
+
+    COLON  shift, and go to state 62
+
+
+State 52
+
+    5 simple_stmt: . small_stmt NEWLINE
+    6            | . small_stmt SEMICOLON
+    7 small_stmt: . expr_stmt
+    8           | . print_stmt
+    9 print_stmt: . PRINT
+   10           | . PRINT test
+   11 expr_stmt: . test
+   12          | . test EQUAL_TO expr_stmt
+   13 test: . or_test
+   14 or_test: . and_test OR or_test
+   15        | . and_test
+   16 and_test: . not_test AND and_test
+   17         | . not_test
+   18 not_test: . NOT not_test
+   19         | . comparison
+   20 comparison: . expr comp_op comparison
+   21           | . expr
+   23 expr: . arith_expr
+   24 arith_expr: . term arith_l_op arith_expr
+   25           | . term
+   27 term: . atom arith_h_op term
+   28     | . atom
+   30 atom: . VARIABLE_NAME
+   31     | . INTEGER
+   32     | . FLOAT
+   33     | . OPEN_PARAN testlist_comp CLOSE_PARAN
+   34     | . STRING
+   35     | . TRUE
+   36     | . FALSE
+   44 while_stmt: WHILE test COLON . suite
+   45 suite: . simple_stmt
+   46      | . NEWLINE BEGIN_INDENT stmt_rec END_INDENT
+
+    VARIABLE_NAME  shift, and go to state 1
+    INTEGER        shift, and go to state 2
+    FLOAT          shift, and go to state 3
+    TRUE           shift, and go to state 4
+    FALSE          shift, and go to state 5
+    STRING         shift, and go to state 6
+    NEWLINE        shift, and go to state 63
+    NOT            shift, and go to state 10
+    OPEN_PARAN     shift, and go to state 11
+    PRINT          shift, and go to state 12
+
+    simple_stmt  go to state 64
+    small_stmt   go to state 15
+    print_stmt   go to state 16
+    expr_stmt    go to state 17
+    test         go to state 18
+    or_test      go to state 19
+    and_test     go to state 20
+    not_test     go to state 21
+    comparison   go to state 22
+    expr         go to state 23
+    arith_expr   go to state 24
+    term         go to state 25
+    atom         go to state 26
+    suite        go to state 65
+
+
+State 53
+
+    5 simple_stmt: . small_stmt NEWLINE
+    6            | . small_stmt SEMICOLON
+    7 small_stmt: . expr_stmt
+    8           | . print_stmt
+    9 print_stmt: . PRINT
+   10           | . PRINT test
+   11 expr_stmt: . test
+   12          | . test EQUAL_TO expr_stmt
+   13 test: . or_test
+   14 or_test: . and_test OR or_test
+   15        | . and_test
+   16 and_test: . not_test AND and_test
+   17         | . not_test
+   18 not_test: . NOT not_test
+   19         | . comparison
+   20 comparison: . expr comp_op comparison
+   21           | . expr
+   23 expr: . arith_expr
+   24 arith_expr: . term arith_l_op arith_expr
+   25           | . term
+   27 term: . atom arith_h_op term
+   28     | . atom
+   30 atom: . VARIABLE_NAME
+   31     | . INTEGER
+   32     | . FLOAT
+   33     | . OPEN_PARAN testlist_comp CLOSE_PARAN
+   34     | . STRING
+   35     | . TRUE
+   36     | . FALSE
+   42 proto_if_stmt: IF test COLON . suite
+   45 suite: . simple_stmt
+   46      | . NEWLINE BEGIN_INDENT stmt_rec END_INDENT
+
+    VARIABLE_NAME  shift, and go to state 1
+    INTEGER        shift, and go to state 2
+    FLOAT          shift, and go to state 3
+    TRUE           shift, and go to state 4
+    FALSE          shift, and go to state 5
+    STRING         shift, and go to state 6
+    NEWLINE        shift, and go to state 63
+    NOT            shift, and go to state 10
+    OPEN_PARAN     shift, and go to state 11
+    PRINT          shift, and go to state 12
+
+    simple_stmt  go to state 64
+    small_stmt   go to state 15
+    print_stmt   go to state 16
+    expr_stmt    go to state 17
+    test         go to state 18
+    or_test      go to state 19
+    and_test     go to state 20
+    not_test     go to state 21
+    comparison   go to state 22
+    expr         go to state 23
+    arith_expr   go to state 24
+    term         go to state 25
+    atom         go to state 26
+    suite        go to state 66
+
+
+State 54
+
+   33 atom: OPEN_PARAN testlist_comp CLOSE_PARAN .
+
+    $default  reduce using rule 33 (atom)
+
+
+State 55
+
+   12 expr_stmt: test EQUAL_TO expr_stmt .
+
+    $default  reduce using rule 12 (expr_stmt)
+
+
+State 56
+
+   14 or_test: and_test OR or_test .
+
+    $default  reduce using rule 14 (or_test)
+
+
+State 57
+
+   16 and_test: not_test AND and_test .
+
+    $default  reduce using rule 16 (and_test)
+
+
+State 58
+
+   20 comparison: expr comp_op comparison .
+
+    $default  reduce using rule 20 (comparison)
+
+
+State 59
+
+   24 arith_expr: term arith_l_op arith_expr .
+
+    $default  reduce using rule 24 (arith_expr)
+
+
+State 60
+
+   27 term: atom arith_h_op term .
+
+    $default  reduce using rule 27 (term)
+
+
+State 61
+
+   43 proto_if_stmt: proto_if_stmt ELIF test . COLON suite
+
+    COLON  shift, and go to state 67
+
+
+State 62
+
+    5 simple_stmt: . small_stmt NEWLINE
+    6            | . small_stmt SEMICOLON
+    7 small_stmt: . expr_stmt
+    8           | . print_stmt
+    9 print_stmt: . PRINT
+   10           | . PRINT test
+   11 expr_stmt: . test
+   12          | . test EQUAL_TO expr_stmt
+   13 test: . or_test
+   14 or_test: . and_test OR or_test
+   15        | . and_test
+   16 and_test: . not_test AND and_test
+   17         | . not_test
+   18 not_test: . NOT not_test
+   19         | . comparison
+   20 comparison: . expr comp_op comparison
+   21           | . expr
+   23 expr: . arith_expr
+   24 arith_expr: . term arith_l_op arith_expr
+   25           | . term
+   27 term: . atom arith_h_op term
+   28     | . atom
+   30 atom: . VARIABLE_NAME
+   31     | . INTEGER
+   32     | . FLOAT
+   33     | . OPEN_PARAN testlist_comp CLOSE_PARAN
+   34     | . STRING
+   35     | . TRUE
+   36     | . FALSE
+   41 if_stmt: proto_if_stmt ELSE COLON . suite
+   45 suite: . simple_stmt
+   46      | . NEWLINE BEGIN_INDENT stmt_rec END_INDENT
+
+    VARIABLE_NAME  shift, and go to state 1
+    INTEGER        shift, and go to state 2
+    FLOAT          shift, and go to state 3
+    TRUE           shift, and go to state 4
+    FALSE          shift, and go to state 5
+    STRING         shift, and go to state 6
+    NEWLINE        shift, and go to state 63
+    NOT            shift, and go to state 10
+    OPEN_PARAN     shift, and go to state 11
+    PRINT          shift, and go to state 12
+
+    simple_stmt  go to state 64
+    small_stmt   go to state 15
+    print_stmt   go to state 16
+    expr_stmt    go to state 17
+    test         go to state 18
+    or_test      go to state 19
+    and_test     go to state 20
+    not_test     go to state 21
+    comparison   go to state 22
+    expr         go to state 23
+    arith_expr   go to state 24
+    term         go to state 25
+    atom         go to state 26
+    suite        go to state 68
+
+
+State 63
+
+   46 suite: NEWLINE . BEGIN_INDENT stmt_rec END_INDENT
+
+    BEGIN_INDENT  shift, and go to state 69
+
+
+State 64
+
+   45 suite: simple_stmt .
+
+    $default  reduce using rule 45 (suite)
+
+
+State 65
+
+   44 while_stmt: WHILE test COLON suite .
+
+    $default  reduce using rule 44 (while_stmt)
+
+
+State 66
+
+   42 proto_if_stmt: IF test COLON suite .
+
+    $default  reduce using rule 42 (proto_if_stmt)
+
+
+State 67
+
+    5 simple_stmt: . small_stmt NEWLINE
+    6            | . small_stmt SEMICOLON
+    7 small_stmt: . expr_stmt
+    8           | . print_stmt
+    9 print_stmt: . PRINT
+   10           | . PRINT test
+   11 expr_stmt: . test
+   12          | . test EQUAL_TO expr_stmt
+   13 test: . or_test
+   14 or_test: . and_test OR or_test
+   15        | . and_test
+   16 and_test: . not_test AND and_test
+   17         | . not_test
+   18 not_test: . NOT not_test
+   19         | . comparison
+   20 comparison: . expr comp_op comparison
+   21           | . expr
+   23 expr: . arith_expr
+   24 arith_expr: . term arith_l_op arith_expr
+   25           | . term
+   27 term: . atom arith_h_op term
+   28     | . atom
+   30 atom: . VARIABLE_NAME
+   31     | . INTEGER
+   32     | . FLOAT
+   33     | . OPEN_PARAN testlist_comp CLOSE_PARAN
+   34     | . STRING
+   35     | . TRUE
+   36     | . FALSE
+   43 proto_if_stmt: proto_if_stmt ELIF test COLON . suite
+   45 suite: . simple_stmt
+   46      | . NEWLINE BEGIN_INDENT stmt_rec END_INDENT
+
+    VARIABLE_NAME  shift, and go to state 1
+    INTEGER        shift, and go to state 2
+    FLOAT          shift, and go to state 3
+    TRUE           shift, and go to state 4
+    FALSE          shift, and go to state 5
+    STRING         shift, and go to state 6
+    NEWLINE        shift, and go to state 63
+    NOT            shift, and go to state 10
+    OPEN_PARAN     shift, and go to state 11
+    PRINT          shift, and go to state 12
+
+    simple_stmt  go to state 64
+    small_stmt   go to state 15
+    print_stmt   go to state 16
+    expr_stmt    go to state 17
+    test         go to state 18
+    or_test      go to state 19
+    and_test     go to state 20
+    not_test     go to state 21
+    comparison   go to state 22
+    expr         go to state 23
+    arith_expr   go to state 24
+    term         go to state 25
+    atom         go to state 26
+    suite        go to state 70
+
+
+State 68
+
+   41 if_stmt: proto_if_stmt ELSE COLON suite .
+
+    $default  reduce using rule 41 (if_stmt)
+
+
+State 69
+
+    5 simple_stmt: . small_stmt NEWLINE
+    6            | . small_stmt SEMICOLON
+    7 small_stmt: . expr_stmt
+    8           | . print_stmt
+    9 print_stmt: . PRINT
+   10           | . PRINT test
+   11 expr_stmt: . test
+   12          | . test EQUAL_TO expr_stmt
+   13 test: . or_test
+   14 or_test: . and_test OR or_test
+   15        | . and_test
+   16 and_test: . not_test AND and_test
+   17         | . not_test
+   18 not_test: . NOT not_test
+   19         | . comparison
+   20 comparison: . expr comp_op comparison
+   21           | . expr
+   23 expr: . arith_expr
+   24 arith_expr: . term arith_l_op arith_expr
+   25           | . term
+   27 term: . atom arith_h_op term
+   28     | . atom
+   30 atom: . VARIABLE_NAME
+   31     | . INTEGER
+   32     | . FLOAT
+   33     | . OPEN_PARAN testlist_comp CLOSE_PARAN
+   34     | . STRING
+   35     | . TRUE
+   36     | . FALSE
+   38 compound_stmt: . if_stmt
+   39              | . while_stmt
+   40 if_stmt: . proto_if_stmt
+   41        | . proto_if_stmt ELSE COLON suite
+   42 proto_if_stmt: . IF test COLON suite
+   43              | . proto_if_stmt ELIF test COLON suite
+   44 while_stmt: . WHILE test COLON suite
+   46 suite: NEWLINE BEGIN_INDENT . stmt_rec END_INDENT
+   47 stmt: . simple_stmt
+   48     | . compound_stmt
+   49 stmt_rec: . stmt
+   50         | . stmt_rec stmt
+
+    VARIABLE_NAME  shift, and go to state 1
+    INTEGER        shift, and go to state 2
+    FLOAT          shift, and go to state 3
+    TRUE           shift, and go to state 4
+    FALSE          shift, and go to state 5
+    STRING         shift, and go to state 6
+    WHILE          shift, and go to state 8
+    IF             shift, and go to state 9
+    NOT            shift, and go to state 10
+    OPEN_PARAN     shift, and go to state 11
+    PRINT          shift, and go to state 12
+
+    simple_stmt    go to state 71
+    small_stmt     go to state 15
+    print_stmt     go to state 16
+    expr_stmt      go to state 17
+    test           go to state 18
+    or_test        go to state 19
+    and_test       go to state 20
+    not_test       go to state 21
+    comparison     go to state 22
+    expr           go to state 23
+    arith_expr     go to state 24
+    term           go to state 25
+    atom           go to state 26
+    compound_stmt  go to state 72
+    if_stmt        go to state 28
+    proto_if_stmt  go to state 29
+    while_stmt     go to state 30
+    stmt           go to state 73
+    stmt_rec       go to state 74
+
+
+State 70
+
+   43 proto_if_stmt: proto_if_stmt ELIF test COLON suite .
+
+    $default  reduce using rule 43 (proto_if_stmt)
+
+
+State 71
+
+   47 stmt: simple_stmt .
+
+    $default  reduce using rule 47 (stmt)
+
+
+State 72
+
+   48 stmt: compound_stmt .
+
+    $default  reduce using rule 48 (stmt)
+
+
+State 73
+
+   49 stmt_rec: stmt .
+
+    $default  reduce using rule 49 (stmt_rec)
+
+
+State 74
+
+    5 simple_stmt: . small_stmt NEWLINE
+    6            | . small_stmt SEMICOLON
+    7 small_stmt: . expr_stmt
+    8           | . print_stmt
+    9 print_stmt: . PRINT
+   10           | . PRINT test
+   11 expr_stmt: . test
+   12          | . test EQUAL_TO expr_stmt
+   13 test: . or_test
+   14 or_test: . and_test OR or_test
+   15        | . and_test
+   16 and_test: . not_test AND and_test
+   17         | . not_test
+   18 not_test: . NOT not_test
+   19         | . comparison
+   20 comparison: . expr comp_op comparison
+   21           | . expr
+   23 expr: . arith_expr
+   24 arith_expr: . term arith_l_op arith_expr
+   25           | . term
+   27 term: . atom arith_h_op term
+   28     | . atom
+   30 atom: . VARIABLE_NAME
+   31     | . INTEGER
+   32     | . FLOAT
+   33     | . OPEN_PARAN testlist_comp CLOSE_PARAN
+   34     | . STRING
+   35     | . TRUE
+   36     | . FALSE
+   38 compound_stmt: . if_stmt
+   39              | . while_stmt
+   40 if_stmt: . proto_if_stmt
+   41        | . proto_if_stmt ELSE COLON suite
+   42 proto_if_stmt: . IF test COLON suite
+   43              | . proto_if_stmt ELIF test COLON suite
+   44 while_stmt: . WHILE test COLON suite
+   46 suite: NEWLINE BEGIN_INDENT stmt_rec . END_INDENT
+   47 stmt: . simple_stmt
+   48     | . compound_stmt
+   50 stmt_rec: stmt_rec . stmt
+
+    VARIABLE_NAME  shift, and go to state 1
+    INTEGER        shift, and go to state 2
+    FLOAT          shift, and go to state 3
+    TRUE           shift, and go to state 4
+    FALSE          shift, and go to state 5
+    STRING         shift, and go to state 6
+    END_INDENT     shift, and go to state 75
+    WHILE          shift, and go to state 8
+    IF             shift, and go to state 9
+    NOT            shift, and go to state 10
+    OPEN_PARAN     shift, and go to state 11
+    PRINT          shift, and go to state 12
+
+    simple_stmt    go to state 71
+    small_stmt     go to state 15
+    print_stmt     go to state 16
+    expr_stmt      go to state 17
+    test           go to state 18
+    or_test        go to state 19
+    and_test       go to state 20
+    not_test       go to state 21
+    comparison     go to state 22
+    expr           go to state 23
+    arith_expr     go to state 24
+    term           go to state 25
+    atom           go to state 26
+    compound_stmt  go to state 72
+    if_stmt        go to state 28
+    proto_if_stmt  go to state 29
+    while_stmt     go to state 30
+    stmt           go to state 76
+
+
+State 75
+
+   46 suite: NEWLINE BEGIN_INDENT stmt_rec END_INDENT .
+
+    $default  reduce using rule 46 (suite)
+
+
+State 76
+
+   50 stmt_rec: stmt_rec stmt .
+
+    $default  reduce using rule 50 (stmt_rec)
