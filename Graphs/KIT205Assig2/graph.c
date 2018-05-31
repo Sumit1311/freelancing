@@ -40,7 +40,7 @@ void print_graph(Graph *g, int size) {
 		printf("Vertex : %d | ", i);
 		x = g[i].edges->head;
 		while(x != NULL) {
-			printf(" %d", x->edge.to_vertex);
+			printf(" (%d, %d)", x->edge.to_vertex,x->edge.weight);
 			x = x->next;
 		}		
 		printf("\n");

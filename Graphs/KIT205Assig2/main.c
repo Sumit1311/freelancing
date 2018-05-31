@@ -6,7 +6,8 @@
 
 int** make_dem(int size, int roughness) {
 	//int seed = time(NULL);
-	int seed = 1527744747;
+	//int seed = 1527744747;
+	int seed = 12;
 	srand(seed);
 	int** dem = malloc(size * sizeof *dem);
 	for (int x = 0; x < size; x++) {
@@ -95,11 +96,13 @@ void print_2D_ascii(int** array2D, int size) {
 }
 
 int main() {
-        int size = 3, i = 0, j = 0, vertex_from = 0, vertex_to = 0, to_x = 0, to_y = 0;
+        int size = 33, i = 0, j = 0, vertex_from = 0, vertex_to = 0, to_x = 0, to_y = 0;
         int **dem = make_dem(size, 4*size);
         Graph *g = NULL, *g1 = NULL;
+	int total_energy;
         graph_init(&g, size);
         graph_init(&g1, size);
+
         for(i = 0; i < size; i++){
 		for(j = 0; j < size; j++){
 			vertex_from = i*size + j;
@@ -155,8 +158,9 @@ int main() {
 	}
         //printf("%d\n",g[i].V);
         print_2D(dem, size); 
-	print_graph(g, size);
-        print_2D(calculate_shortest_pathA(g, dem, size, 0, (size*size)-1),size);
+	//print_graph(g, size);
+        print_2D(calculate_shortest_pathA(g, dem, size, 0, (size*size)-1, &total_energy),size);
+	printf("Total Energy : %d\n", total_energy);
         for(i = 0; i < size; i++){
 		for(j = 0; j < size; j++){
 			vertex_from = i*size + j;
@@ -210,8 +214,9 @@ int main() {
 			// i+1, j+1
 		}
 	}
-	print_graph(g, size);
-        //print_2D(calculate_shortest_pathB(g, dem, size, 0, (size*size)-1),size);
+	//print_graph(g1, size);
+        print_2D(calculate_shortest_pathB(g1, dem, size, 0, (size*size)-1, &total_energy),size);
+	printf("Total Energy : %d\n",total_energy);
 	printf("\npress enter to exit\n");
 	getchar();
 	return 0;

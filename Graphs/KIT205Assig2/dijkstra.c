@@ -22,7 +22,7 @@ int find_min(int *Q, int *dist, int size) {
 				min = o;
 				continue;
 			}
-                        if(dist[min] >= dist[o]) {
+                        if(dist[min] > dist[o]) {
 				min = o;
 			}
 		} else {
@@ -31,7 +31,7 @@ int find_min(int *Q, int *dist, int size) {
 	}
 	return min;	
 }	
-int** calculate_shortest_pathA(Graph *g, int **dem, int size, int source, int dest) {
+int** calculate_shortest_pathA(Graph *g, int **dem, int size, int source, int dest, int *energy) {
 	int *Q, i = 0;
 	int *dist, *prev, min_dist_ver, alt;
 	EdgeNodePtr node;
@@ -47,7 +47,7 @@ int** calculate_shortest_pathA(Graph *g, int **dem, int size, int source, int de
 	prev = (int *)malloc(sizeof(int) * size *size);
         for(i = 0; i < (size*size); i++){
 		Q[i] = 1;
-		dist[i] = 1000000;
+		dist[i] = 100000;
                 prev[i] = -1;		
 	}
 	dist[source] = 0;
@@ -61,16 +61,16 @@ int** calculate_shortest_pathA(Graph *g, int **dem, int size, int source, int de
 		node = g[min_dist_ver].edges->head;
 		while(node){
 			alt = dist[min_dist_ver] + node->edge.weight;
-			printf("Distance after Adding node %d is %d | ",node->edge.to_vertex ,alt);
-			if(alt < dist[node->edge.to_vertex]){
+			//printf("Distance after Adding node %d is %d | ",node->edge.to_vertex ,alt);
+			if(Q[node->edge.to_vertex] && alt < dist[node->edge.to_vertex]){
 				dist[node->edge.to_vertex] = alt;
 				prev[node->edge.to_vertex] = min_dist_ver;
 			}		
 			node = node->next;
 		}
-		printf("\n");
+		//printf("\n");
 	}
-
+	*energy = dist[dest];
 	min_dist_ver = dest;
 	while(prev[min_dist_ver] != -1) {
 		copy_dem[min_dist_ver/size][min_dist_ver%size] = -1;
