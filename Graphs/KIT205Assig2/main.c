@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include "graph.h"
 #include "dijkstra.h"
+#include "floyd-warshall.h"
 
 int** make_dem(int size, int roughness) {
 	//int seed = time(NULL);
@@ -96,8 +97,9 @@ void print_2D_ascii(int** array2D, int size) {
 int main() {
         int size = 3, i = 0, j = 0, vertex_from = 0, vertex_to = 0, to_x = 0, to_y = 0;
         int **dem = make_dem(size, 4*size);
-        Graph *g = NULL;
+        Graph *g = NULL, *g1 = NULL;
         graph_init(&g, size);
+        graph_init(&g1, size);
         for(i = 0; i < size; i++){
 		for(j = 0; j < size; j++){
 			vertex_from = i*size + j;
@@ -155,6 +157,61 @@ int main() {
         print_2D(dem, size); 
 	print_graph(g, size);
         print_2D(calculate_shortest_pathA(g, dem, size, 0, (size*size)-1),size);
+        for(i = 0; i < size; i++){
+		for(j = 0; j < size; j++){
+			vertex_from = i*size + j;
+			//printf("%d : ",vertex_from);
+                        if(i == 0) {
+				add_edge(g1, vertex_from, (i+1)*size + j, cost_funcB(dem[i+1][j]-dem[i][j]));	
+				//printf("(%d, %d)",(i+1)*size + j, cost_funcB(dem[i+1][j]-dem[i][j]));
+                                if(j != (size - 1)) {
+					add_edge(g1, vertex_from, (i)*size + (j + 1), cost_funcB(dem[i][j+1]-dem[i][j]));
+					add_edge(g1, vertex_from, (i+1)*size + (j+1), cost_funcB(dem[i+1][j+1]-dem[i][j]));	
+				}
+                                if(j != 0) {
+					add_edge(g1, vertex_from, (i)*size + (j - 1), cost_funcB(dem[i][j-1]-dem[i][j]));
+					add_edge(g1, vertex_from, (i+1)*size + (j - 1), cost_funcB(dem[i+1][j-1] - dem[i][j]));	
+				}
+			} else if( i  == (size - 1)) {
+				add_edge(g1, vertex_from, (i-1)*size + j, cost_funcB(dem[i-1][j] - dem[i][j]));	
+                                if(j != (size - 1)) {
+					add_edge(g1, vertex_from, (i)*size + (j + 1), cost_funcB(dem[i][j+1] - dem[i][j]));
+					add_edge(g1, vertex_from, (i-1)*size + j, cost_funcB(dem[i-1][j] - dem[i][j]));	
+				}
+                                if(j != 0) {
+					add_edge(g1, vertex_from, (i)*size + (j - 1), cost_funcB(dem[i][j-1] - dem[i][j]));
+					add_edge(g1, vertex_from, (i-1)*size + (j - 1), cost_funcB(dem[i-1][j-1] - dem[i][j]));	
+				}
+
+			} else {
+				add_edge(g1, vertex_from, (i-1)*size + (j), cost_funcB(dem[i-1][j] - dem[i][j]));	
+				add_edge(g1, vertex_from, (i+1)*size + (j), cost_funcB(dem[i+1][j] - dem[i][j]));
+                                if(j != (size - 1)) {
+					add_edge(g1, vertex_from, (i-1)*size + (j+1), cost_funcB(dem[i-1][j+1] - dem[i][j]));	
+					add_edge(g1, vertex_from, (i)*size + (j+1), cost_funcB(dem[i][j+1] - dem[i][j]));
+					add_edge(g1, vertex_from, (i+1)*size + (j+1), cost_funcB(dem[i+1][j+1] - dem[i][j]));
+				}
+                                if(j != 0) {
+					add_edge(g1, vertex_from, (i-1)*size + (j-1), cost_funcB(dem[i-1][j-1] - dem[i][j]));	
+					add_edge(g1, vertex_from, (i)*size + (j-1), cost_funcB(dem[i][j-1] - dem[i][j]));	
+					add_edge(g1, vertex_from, (i+1)*size + (j-1), cost_funcB(dem[i+1][j-1] - dem[i][j]));
+				} 
+
+			}
+                        
+                        
+			// i-1, j-1
+			// i-1, j
+			// i-1, j+1
+			// i, j-1
+			// i, j+1
+			// i+1, j-1
+			// i+1, j
+			// i+1, j+1
+		}
+	}
+	print_graph(g, size);
+        //print_2D(calculate_shortest_pathB(g, dem, size, 0, (size*size)-1),size);
 	printf("\npress enter to exit\n");
 	getchar();
 	return 0;
