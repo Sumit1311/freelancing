@@ -1,3 +1,4 @@
+#include <stdio.h>
 #pragma once
 
 typedef struct edge {
@@ -18,3 +19,7 @@ typedef struct graph {
 	int V;
 	EdgeList *edges;
 } Graph;
+
+void graph_init(Graph **g, int size);
+void add_edge(Graph *g, int from, int to, int weight); 
+void print_graph(Graph *g, int size) ;

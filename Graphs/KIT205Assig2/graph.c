@@ -1,15 +1,48 @@
 ﻿#include "graph.h"
-Graph *g;
+#include <stdlib.h>
+//Graph *g;
 
-void initGraph(int size) {
-    g = (Graph *)malloc(sizeof(Graph) * size * size);
-    for(int i = 0; i < size; i++) {
-        g[i].V = i;
-        g[i].edges = malloc(sizeof(EdgeList));
-        g[i].edges-> head = NULL;
+void graph_init(Graph **g, int size) {
+    int i = 0;
+    Graph *temp;
+    temp = (Graph *)malloc(sizeof(Graph) * size * size);
+    for(i = 0; i < (size * size); i++) {
+        temp[i].V = i;
+        temp[i].edges = malloc(sizeof(EdgeList));
+        temp[i].edges-> head = NULL;
     }
+    *g = temp;
 }
 
-void addEdge(int from, int to, int weight) {
-   g[i] 
+void add_edge(Graph *g, int from, int to, int weight) {
+   /*printf("Adding edge %d - %d : %d\n", from, to, weight);*/
+   EdgeNodePtr x =(EdgeNodePtr)malloc(sizeof(struct edgeNode));
+   EdgeNodePtr y, prev;
+   x->next = NULL;
+   x->edge.to_vertex = to;
+   x->edge.weight = weight;
+   if(g[from].edges->head == NULL) {
+	g[from].edges->head = x;
+   } else {
+	y = prev = g[from].edges->head;
+	while(y) {
+		prev = y;
+		y = y->next;
+	}
+	prev->next = x;
+  }
+}
+
+void print_graph(Graph *g, int size) {
+	int i = 0;
+        EdgeNodePtr x;
+	for(i = 0 ; i < size*size; i++) {
+		printf("Vertex : %d | ", i);
+		x = g[i].edges->head;
+		while(x != NULL) {
+			printf(" %d", x->edge.to_vertex);
+			x = x->next;
+		}		
+		printf("\n");
+	}
 }
