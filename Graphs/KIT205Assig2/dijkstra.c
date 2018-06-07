@@ -22,7 +22,7 @@ int find_min(int *Q, int *dist, int size) {
 				min = o;
 				continue;
 			}
-                        if(dist[min] > dist[o]) {
+                        if(dist[min] >= dist[o]) {
 				min = o;
 			}
 		} else {
@@ -54,15 +54,15 @@ int** calculate_shortest_pathA(Graph *g, int **dem, int size, int source, int de
 	while(!isEmpty(Q, size)) {
 		min_dist_ver = find_min(Q, dist, size);
 		Q[min_dist_ver] = 0;
-	 	if(min_dist_ver == dest){
+	 	/*if(min_dist_ver == dest){
 			break;
-		}
+		}*/
 		//printf("Adding node %d, dist : %d | ", min_dist_ver, dist[min_dist_ver]);
 		node = g[min_dist_ver].edges->head;
 		while(node){
 			alt = dist[min_dist_ver] + node->edge.weight;
 			//printf("Distance after Adding node %d is %d | ",node->edge.to_vertex ,alt);
-			if(Q[node->edge.to_vertex] && alt < dist[node->edge.to_vertex]){
+			if(Q[node->edge.to_vertex] && alt <= dist[node->edge.to_vertex]){
 				dist[node->edge.to_vertex] = alt;
 				prev[node->edge.to_vertex] = min_dist_ver;
 			}		

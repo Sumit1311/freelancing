@@ -7,7 +7,7 @@
 int** make_dem(int size, int roughness) {
 	//int seed = time(NULL);
 	//int seed = 1527744747;
-	int seed = 12;
+	int seed = 0;
 	srand(seed);
 	int** dem = malloc(size * sizeof *dem);
 	for (int x = 0; x < size; x++) {
@@ -112,35 +112,35 @@ int main() {
 				//printf("(%d, %d)",(i+1)*size + j, cost_funcA(dem[i+1][j]-dem[i][j]));
                                 if(j != (size - 1)) {
 					add_edge(g, vertex_from, (i)*size + (j + 1), cost_funcA(dem[i][j+1]-dem[i][j]));
-					add_edge(g, vertex_from, (i+1)*size + (j+1), cost_funcA(dem[i+1][j+1]-dem[i][j]));	
+					//add_edge(g, vertex_from, (i+1)*size + (j+1), cost_funcA(dem[i+1][j+1]-dem[i][j]));	
 				}
                                 if(j != 0) {
 					add_edge(g, vertex_from, (i)*size + (j - 1), cost_funcA(dem[i][j-1]-dem[i][j]));
-					add_edge(g, vertex_from, (i+1)*size + (j - 1), cost_funcA(dem[i+1][j-1] - dem[i][j]));	
+					//add_edge(g, vertex_from, (i+1)*size + (j - 1), cost_funcA(dem[i+1][j-1] - dem[i][j]));	
 				}
 			} else if( i  == (size - 1)) {
 				add_edge(g, vertex_from, (i-1)*size + j, cost_funcA(dem[i-1][j] - dem[i][j]));	
                                 if(j != (size - 1)) {
 					add_edge(g, vertex_from, (i)*size + (j + 1), cost_funcA(dem[i][j+1] - dem[i][j]));
-					add_edge(g, vertex_from, (i-1)*size + j, cost_funcA(dem[i-1][j] - dem[i][j]));	
+					//add_edge(g, vertex_from, (i-1)*size + j, cost_funcA(dem[i-1][j] - dem[i][j]));	
 				}
                                 if(j != 0) {
 					add_edge(g, vertex_from, (i)*size + (j - 1), cost_funcA(dem[i][j-1] - dem[i][j]));
-					add_edge(g, vertex_from, (i-1)*size + (j - 1), cost_funcA(dem[i-1][j-1] - dem[i][j]));	
+					//add_edge(g, vertex_from, (i-1)*size + (j - 1), cost_funcA(dem[i-1][j-1] - dem[i][j]));	
 				}
 
 			} else {
 				add_edge(g, vertex_from, (i-1)*size + (j), cost_funcA(dem[i-1][j] - dem[i][j]));	
 				add_edge(g, vertex_from, (i+1)*size + (j), cost_funcA(dem[i+1][j] - dem[i][j]));
                                 if(j != (size - 1)) {
-					add_edge(g, vertex_from, (i-1)*size + (j+1), cost_funcA(dem[i-1][j+1] - dem[i][j]));	
+					//add_edge(g, vertex_from, (i-1)*size + (j+1), cost_funcA(dem[i-1][j+1] - dem[i][j]));	
 					add_edge(g, vertex_from, (i)*size + (j+1), cost_funcA(dem[i][j+1] - dem[i][j]));
-					add_edge(g, vertex_from, (i+1)*size + (j+1), cost_funcA(dem[i+1][j+1] - dem[i][j]));
+					//add_edge(g, vertex_from, (i+1)*size + (j+1), cost_funcA(dem[i+1][j+1] - dem[i][j]));
 				}
                                 if(j != 0) {
-					add_edge(g, vertex_from, (i-1)*size + (j-1), cost_funcA(dem[i-1][j-1] - dem[i][j]));	
+					//add_edge(g, vertex_from, (i-1)*size + (j-1), cost_funcA(dem[i-1][j-1] - dem[i][j]));	
 					add_edge(g, vertex_from, (i)*size + (j-1), cost_funcA(dem[i][j-1] - dem[i][j]));	
-					add_edge(g, vertex_from, (i+1)*size + (j-1), cost_funcA(dem[i+1][j-1] - dem[i][j]));
+					//add_edge(g, vertex_from, (i+1)*size + (j-1), cost_funcA(dem[i+1][j-1] - dem[i][j]));
 				} 
 
 			}
@@ -158,7 +158,7 @@ int main() {
 	}
         //printf("%d\n",g[i].V);
         print_2D(dem, size); 
-	//print_graph(g, size);
+	print_graph(g, size);
         print_2D(calculate_shortest_pathA(g, dem, size, 0, (size*size)-1, &total_energy),size);
 	printf("Total Energy : %d\n", total_energy);
         for(i = 0; i < size; i++){
@@ -170,35 +170,35 @@ int main() {
 				//printf("(%d, %d)",(i+1)*size + j, cost_funcB(dem[i+1][j]-dem[i][j]));
                                 if(j != (size - 1)) {
 					add_edge(g1, vertex_from, (i)*size + (j + 1), cost_funcB(dem[i][j+1]-dem[i][j]));
-					add_edge(g1, vertex_from, (i+1)*size + (j+1), cost_funcB(dem[i+1][j+1]-dem[i][j]));	
+					//add_edge(g1, vertex_from, (i+1)*size + (j+1), cost_funcB(dem[i+1][j+1]-dem[i][j]));	
 				}
                                 if(j != 0) {
 					add_edge(g1, vertex_from, (i)*size + (j - 1), cost_funcB(dem[i][j-1]-dem[i][j]));
-					add_edge(g1, vertex_from, (i+1)*size + (j - 1), cost_funcB(dem[i+1][j-1] - dem[i][j]));	
+					//add_edge(g1, vertex_from, (i+1)*size + (j - 1), cost_funcB(dem[i+1][j-1] - dem[i][j]));	
 				}
 			} else if( i  == (size - 1)) {
 				add_edge(g1, vertex_from, (i-1)*size + j, cost_funcB(dem[i-1][j] - dem[i][j]));	
                                 if(j != (size - 1)) {
 					add_edge(g1, vertex_from, (i)*size + (j + 1), cost_funcB(dem[i][j+1] - dem[i][j]));
-					add_edge(g1, vertex_from, (i-1)*size + j, cost_funcB(dem[i-1][j] - dem[i][j]));	
+					//add_edge(g1, vertex_from, (i-1)*size + j, cost_funcB(dem[i-1][j] - dem[i][j]));	
 				}
                                 if(j != 0) {
 					add_edge(g1, vertex_from, (i)*size + (j - 1), cost_funcB(dem[i][j-1] - dem[i][j]));
-					add_edge(g1, vertex_from, (i-1)*size + (j - 1), cost_funcB(dem[i-1][j-1] - dem[i][j]));	
+					//add_edge(g1, vertex_from, (i-1)*size + (j - 1), cost_funcB(dem[i-1][j-1] - dem[i][j]));	
 				}
 
 			} else {
 				add_edge(g1, vertex_from, (i-1)*size + (j), cost_funcB(dem[i-1][j] - dem[i][j]));	
 				add_edge(g1, vertex_from, (i+1)*size + (j), cost_funcB(dem[i+1][j] - dem[i][j]));
                                 if(j != (size - 1)) {
-					add_edge(g1, vertex_from, (i-1)*size + (j+1), cost_funcB(dem[i-1][j+1] - dem[i][j]));	
+					//add_edge(g1, vertex_from, (i-1)*size + (j+1), cost_funcB(dem[i-1][j+1] - dem[i][j]));	
 					add_edge(g1, vertex_from, (i)*size + (j+1), cost_funcB(dem[i][j+1] - dem[i][j]));
-					add_edge(g1, vertex_from, (i+1)*size + (j+1), cost_funcB(dem[i+1][j+1] - dem[i][j]));
+					//add_edge(g1, vertex_from, (i+1)*size + (j+1), cost_funcB(dem[i+1][j+1] - dem[i][j]));
 				}
                                 if(j != 0) {
-					add_edge(g1, vertex_from, (i-1)*size + (j-1), cost_funcB(dem[i-1][j-1] - dem[i][j]));	
+					//add_edge(g1, vertex_from, (i-1)*size + (j-1), cost_funcB(dem[i-1][j-1] - dem[i][j]));	
 					add_edge(g1, vertex_from, (i)*size + (j-1), cost_funcB(dem[i][j-1] - dem[i][j]));	
-					add_edge(g1, vertex_from, (i+1)*size + (j-1), cost_funcB(dem[i+1][j-1] - dem[i][j]));
+					//add_edge(g1, vertex_from, (i+1)*size + (j-1), cost_funcB(dem[i+1][j-1] - dem[i][j]));
 				} 
 
 			}
@@ -218,6 +218,6 @@ int main() {
         print_2D(calculate_shortest_pathB(g1, dem, size, 0, (size*size)-1, &total_energy),size);
 	printf("Total Energy : %d\n",total_energy);
 	printf("\npress enter to exit\n");
-	getchar();
+	//getchar();
 	return 0;
 }

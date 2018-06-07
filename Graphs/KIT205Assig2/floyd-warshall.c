@@ -53,7 +53,7 @@ int** calculate_shortest_pathB(Graph *g, int **dem, int size, int source, int de
 		}
 		printf("\n");
 	}*/
-	*energy = dist[dest][source];
+	*energy = dist[source][dest];
         if(next[source][dest] == -1) {
 		return copy_dem;
 	}
