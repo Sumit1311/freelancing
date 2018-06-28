@@ -1,0 +1,123 @@
+cscope 15 $HOME/workspace/freelancing/Link-Checker               0000000644
+	@link_checker.js
+
+1 
+v¬
+ 
+	g»que¡
+ = 
+»quœe
+("request");
+
+2 
+v¬
+ 
+	gu¾
+ = 
+´oûss
+.
+¬gv
+[3];
+
+4 
+v¬
+ 
+	g¡ršg
+ = 
+´oûss
+.
+¬gv
+[2];
+
+6 
+	gcÚsŞe
+.
+log
+("Reque¡šghURL :", 
+u¾
+);
+
+7 
+»que¡
+(
+u¾
+, 
+»que¡C®lbackfunùiÚ
+);
+
+9 
+funùiÚ
+ 
+	$»que¡C®lbackfunùiÚ
+ (
+”rÜ
+, 
+»¥Ú£
+, 
+body
+) {
+
+10 if(
+”rÜ
+) {
+
+11 
+cÚsŞe
+.
+	`log
+('”rÜ:', 
+”rÜ
+, 'fÜ URL : ', 
+u¾
+);
+
+14 
+cÚsŞe
+.
+	`log
+('¡©usCode:', 
+»¥Ú£
+ &&„e¥Ú£.
+¡©usCode
+);
+
+16 
+v¬
+ 
+šdex
+ = 
+body
+.
+	`šdexOf
+(
+¡ršg
+);
+
+17 if(
+šdex
+ == -1) {
+
+18 
+cÚsŞe
+.
+	`log
+("String‚ot found");
+
+20 
+cÚsŞe
+.
+	`log
+("String Found");
+
+22 
+	}
+}
+
+	@
+1
+.
+1
+/usr/include
+1
+16
+link_checker.js
