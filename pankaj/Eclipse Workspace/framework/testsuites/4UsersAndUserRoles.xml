@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="MMOD Automation" parallel="none">
+	<listeners>
+		<listener class-name="com.emotion.core.TesngListener" />
+	</listeners>
+	
+	<test name="Manage User ">
+		<classes>
+			<class name="com.emotion.tests.ManageUsersTests"/>
+		</classes>
+	</test>
+	
+	<test name="Manage User Roles">
+		<classes>
+			<class name="com.emotion.tests.ManageUserRoles"/>
+		</classes>
+	</test>
+
+</suite> 

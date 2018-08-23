@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-MMOD_Automation">
+              <span class="suite-name border-skipped">MMOD Automation</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-MMOD_Automation">
+                    <span>D:\G_Backup\Eclipse Workspace\framework\testsuites\3OrganizationAndLogin.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-MMOD_Automation">
+                    <span class="test-stats">2 tests</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-MMOD_Automation">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-MMOD_Automation">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-MMOD_Automation">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-MMOD_Automation">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-MMOD_Automation">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">11 methods,  2 skipped,  9 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-MMOD_Automation" class="hide-methods skipped suite-MMOD_Automation"> (hide)</a> <!-- hide-methods skipped suite-MMOD_Automation -->
+                      <a href="#" panel-name="suite-MMOD_Automation" class="show-methods skipped suite-MMOD_Automation"> (show)</a> <!-- show-methods skipped suite-MMOD_Automation -->
+                    </span>
+                    <div class="method-list-content skipped suite-MMOD_Automation">
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-MMOD_Automation" title="com.emotion.tests.OrganizationTests" hash-for-method="verifyAddOrganization(autoOrg777, test, test, autolast1, bhavna_karanjekar@persistent.co.in, 444-525-5522, 444-525-5522, t...)">verifyAddOrganization(autoOrg777, test, test, autolast1, bhavna_karanjekar@persistent.co.in, 444-525-5522, 444-525-5522, t...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-MMOD_Automation" title="com.emotion.tests.OrganizationTests" hash-for-method="verifyAddOrganization(autoOrg888, test, test, autolast2, bhavna_karanjekar@persistent.co.in, 444-525-5522, 444-525-5522, t...)">verifyAddOrganization(autoOrg888, test, test, autolast2, bhavna_karanjekar@persistent.co.in, 444-525-5522, 444-525-5522, t...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-MMOD_Automation -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-MMOD_Automation" class="hide-methods passed suite-MMOD_Automation"> (hide)</a> <!-- hide-methods passed suite-MMOD_Automation -->
+                      <a href="#" panel-name="suite-MMOD_Automation" class="show-methods passed suite-MMOD_Automation"> (show)</a> <!-- show-methods passed suite-MMOD_Automation -->
+                    </span>
+                    <div class="method-list-content passed suite-MMOD_Automation">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-MMOD_Automation" title="com.emotion.tests.LoginTests" hash-for-method="verifyInvalidLogins(!@#$%^&amp;, !@#$%^&amp;)">verifyInvalidLogins(!@#$%^&, !@#$%^&)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-MMOD_Automation" title="com.emotion.tests.LoginTests" hash-for-method="verifyInvalidLogins(test&amp;&amp;123, password)">verifyInvalidLogins(test&&123, password)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-MMOD_Automation" title="com.emotion.tests.LoginTests" hash-for-method="verifyInvalidLogins(administrator, password)">verifyInvalidLogins(administrator, password)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-MMOD_Automation" title="com.emotion.tests.LoginTests" hash-for-method="verifyInvalidLogins(CreativeAuto, password)">verifyInvalidLogins(CreativeAuto, password)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-MMOD_Automation" title="com.emotion.tests.LoginTests" hash-for-method="verifyInvalidLogins(1234, pass)">verifyInvalidLogins(1234, pass)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-MMOD_Automation" title="com.emotion.tests.LoginTests" hash-for-method="verifyInvalidLogins(incorrect, password)">verifyInvalidLogins(incorrect, password)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-MMOD_Automation" title="com.emotion.tests.LoginTests" hash-for-method="verifyInvalidLogins(mpadmin, !@#test)">verifyInvalidLogins(mpadmin, !@#test)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-MMOD_Automation" title="com.emotion.tests.LoginTests" hash-for-method="verifyInvalidLogins(mpadmin, )">verifyInvalidLogins(mpadmin, )</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-MMOD_Automation" title="com.emotion.tests.LoginTests" hash-for-method="verifyValidLogin">verifyValidLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-MMOD_Automation -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-MMOD_Automation" class="panel MMOD_Automation">
+          <div class="suite-MMOD_Automation-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.emotion.tests.OrganizationTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAddOrganization(autoOrg777, test, test, autolast1, bhavna_karanjekar@persistent.co.in, 444-525-5522, 444-525-5522, t...)">
+                  </a> <!-- verifyAddOrganization(autoOrg777, test, test, autolast1, bhavna_karanjekar@persistent.co.in, 444-525-5522, 444-525-5522, t...) -->
+                  <span class="method-name">verifyAddOrganization</span>
+                  <span class="parameters">(autoOrg777, test, test, autolast1, bhavna_karanjekar@persistent.co.in, 444-525-5522, 444-525-5522, test1, denver, CO, 28277, United States, test2434, denver, CO, 28277, United States)</span>
+                  <em>
+(TEST ID : 1 | verifyAddOrganization )                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAddOrganization(autoOrg888, test, test, autolast2, bhavna_karanjekar@persistent.co.in, 444-525-5522, 444-525-5522, t...)">
+                  </a> <!-- verifyAddOrganization(autoOrg888, test, test, autolast2, bhavna_karanjekar@persistent.co.in, 444-525-5522, 444-525-5522, t...) -->
+                  <span class="method-name">verifyAddOrganization</span>
+                  <span class="parameters">(autoOrg888, test, test, autolast2, bhavna_karanjekar@persistent.co.in, 444-525-5522, 444-525-5522, test2, charlotte, NC, 28277, United States, test346345, charlotte, NC, 28277, United States)</span>
+                  <em>
+(TEST ID : 1 | verifyAddOrganization )                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MMOD_Automation-class-skipped -->
+          <div class="suite-MMOD_Automation-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.emotion.tests.LoginTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyInvalidLogins(!@#$%^&amp;, !@#$%^&amp;)">
+                  </a> <!-- verifyInvalidLogins(!@#$%^&, !@#$%^&) -->
+                  <span class="method-name">verifyInvalidLogins</span>
+                  <span class="parameters">(!@#$%^&, !@#$%^&)</span>
+                  <em>
+(TEST ID : 1 | Authentication Test)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyInvalidLogins(test&amp;&amp;123, password)">
+                  </a> <!-- verifyInvalidLogins(test&&123, password) -->
+                  <span class="method-name">verifyInvalidLogins</span>
+                  <span class="parameters">(test&&123, password)</span>
+                  <em>
+(TEST ID : 1 | Authentication Test)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyInvalidLogins(administrator, password)">
+                  </a> <!-- verifyInvalidLogins(administrator, password) -->
+                  <span class="method-name">verifyInvalidLogins</span>
+                  <span class="parameters">(administrator, password)</span>
+                  <em>
+(TEST ID : 1 | Authentication Test)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyInvalidLogins(CreativeAuto, password)">
+                  </a> <!-- verifyInvalidLogins(CreativeAuto, password) -->
+                  <span class="method-name">verifyInvalidLogins</span>
+                  <span class="parameters">(CreativeAuto, password)</span>
+                  <em>
+(TEST ID : 1 | Authentication Test)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyInvalidLogins(1234, pass)">
+                  </a> <!-- verifyInvalidLogins(1234, pass) -->
+                  <span class="method-name">verifyInvalidLogins</span>
+                  <span class="parameters">(1234, pass)</span>
+                  <em>
+(TEST ID : 1 | Authentication Test)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyInvalidLogins(incorrect, password)">
+                  </a> <!-- verifyInvalidLogins(incorrect, password) -->
+                  <span class="method-name">verifyInvalidLogins</span>
+                  <span class="parameters">(incorrect, password)</span>
+                  <em>
+(TEST ID : 1 | Authentication Test)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyInvalidLogins(mpadmin, !@#test)">
+                  </a> <!-- verifyInvalidLogins(mpadmin, !@#test) -->
+                  <span class="method-name">verifyInvalidLogins</span>
+                  <span class="parameters">(mpadmin, !@#test)</span>
+                  <em>
+(TEST ID : 1 | Authentication Test)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyInvalidLogins(mpadmin, )">
+                  </a> <!-- verifyInvalidLogins(mpadmin, ) -->
+                  <span class="method-name">verifyInvalidLogins</span>
+                  <span class="parameters">(mpadmin, )</span>
+                  <em>
+(TEST ID : 1 | Authentication Test)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyValidLogin">
+                  </a> <!-- verifyValidLogin -->
+                  <span class="method-name">verifyValidLogin</span>
+                  <em>
+(TEST ID : 2 | Authentication Test)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MMOD_Automation-class-passed -->
+        </div> <!-- panel MMOD_Automation -->
+        <div panel-name="test-xml-MMOD_Automation" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">D:\G_Backup\Eclipse Workspace\framework\testsuites\3OrganizationAndLogin.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;MMOD Automation&quot; parallel=&quot;none&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.emotion.core.TesngListener&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test name=&quot;Manage Organizations&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.emotion.tests.OrganizationTests&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Manage Organizations --&gt;
+  &lt;test name=&quot;MMOD Login tests&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.emotion.tests.LoginTests&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- MMOD Login tests --&gt;
+&lt;/suite&gt; &lt;!-- MMOD Automation --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-MMOD_Automation" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for MMOD Automation</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Manage Organizations (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">MMOD Login tests (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-MMOD_Automation" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for MMOD Automation</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-MMOD_Automation" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for MMOD Automation</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_MMOD_Automation');
+function tableData_MMOD_Automation() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(11);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'verifyInvalidLogins')
+data.setCell(0, 2, 'com.emotion.tests.LoginTests')
+data.setCell(0, 3, 115372);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'verifyInvalidLogins')
+data.setCell(1, 2, 'com.emotion.tests.LoginTests')
+data.setCell(1, 3, 2563);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'verifyInvalidLogins')
+data.setCell(2, 2, 'com.emotion.tests.LoginTests')
+data.setCell(2, 3, 2502);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'verifyInvalidLogins')
+data.setCell(3, 2, 'com.emotion.tests.LoginTests')
+data.setCell(3, 3, 2082);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'verifyInvalidLogins')
+data.setCell(4, 2, 'com.emotion.tests.LoginTests')
+data.setCell(4, 3, 2029);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'verifyValidLogin')
+data.setCell(5, 2, 'com.emotion.tests.LoginTests')
+data.setCell(5, 3, 2021);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'verifyInvalidLogins')
+data.setCell(6, 2, 'com.emotion.tests.LoginTests')
+data.setCell(6, 3, 1914);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'verifyInvalidLogins')
+data.setCell(7, 2, 'com.emotion.tests.LoginTests')
+data.setCell(7, 3, 1908);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'verifyInvalidLogins')
+data.setCell(8, 2, 'com.emotion.tests.LoginTests')
+data.setCell(8, 3, 1901);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'verifyAddOrganization')
+data.setCell(9, 2, 'com.emotion.tests.OrganizationTests')
+data.setCell(9, 3, 2);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'verifyAddOrganization')
+data.setCell(10, 2, 'com.emotion.tests.OrganizationTests')
+data.setCell(10, 3, 1);
+window.suiteTableData['MMOD_Automation']= { tableData: data, tableDiv: 'times-div-MMOD_Automation'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <div id="times-div-MMOD_Automation">
+              </div> <!-- times-div-MMOD_Automation -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-MMOD_Automation" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for MMOD Automation</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyValidLogin</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">PASSED | TEST ID : 2 | User is able to login with valid crediantials.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyInvalidLogins(!@#$%^&, !@#$%^&)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">PASSED | TEST ID : 1 | User is not able to login with invalid crediantials</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyInvalidLogins(test&&123, password)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">PASSED | TEST ID : 1 | User is not able to login with invalid crediantials</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyInvalidLogins(administrator, password)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">PASSED | TEST ID : 1 | User is not able to login with invalid crediantials</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyInvalidLogins(CreativeAuto, password)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">PASSED | TEST ID : 1 | User is not able to login with invalid crediantials</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyInvalidLogins(1234, pass)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">PASSED | TEST ID : 1 | User is not able to login with invalid crediantials</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyInvalidLogins(incorrect, password)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">PASSED | TEST ID : 1 | User is not able to login with invalid crediantials</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyInvalidLogins(mpadmin, !@#test)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">PASSED | TEST ID : 1 | User is not able to login with invalid crediantials</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyInvalidLogins(mpadmin, )</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">PASSED | TEST ID : 1 | User is not able to login with invalid crediantials</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-MMOD_Automation" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-MMOD_Automation" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.emotion.tests.OrganizationTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">setUp</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">verifyAddOrganization(autoOrg777, test, test, autolast1, bhavna_karanjekar@persistent.co.in, 444-525-5522, 444-525-5522, t...)</span>
+                <span class="method-start">84861 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyAddOrganization(autoOrg888, test, test, autolast2, bhavna_karanjekar@persistent.co.in, 444-525-5522, 444-525-5522, t...)</span>
+                <span class="method-start">84865 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.emotion.tests.LoginTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">85011 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">verifyInvalidLogins(administrator, password)</span>
+                <span class="method-start">100070 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyInvalidLogins(CreativeAuto, password)</span>
+                <span class="method-start">215456 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyInvalidLogins(mpadmin, )</span>
+                <span class="method-start">217541 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyInvalidLogins(incorrect, password)</span>
+                <span class="method-start">220106 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyInvalidLogins(test&&123, password)</span>
+                <span class="method-start">222010 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyInvalidLogins(1234, pass)</span>
+                <span class="method-start">224514 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyInvalidLogins(!@#$%^&, !@#$%^&)</span>
+                <span class="method-start">226431 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyInvalidLogins(mpadmin, !@#test)</span>
+                <span class="method-start">228341 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyValidLogin</span>
+                <span class="method-start">230373 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">232396 ms</span>
+              </div> <!-- configuration-class after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

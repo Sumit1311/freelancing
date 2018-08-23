@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="MMOD Automation" parallel="none">
+	<listeners>
+		<listener class-name="com.emotion.core.TesngListener" />
+	</listeners>
+	
+	<test name="Create Caption Type ">
+		<classes>
+			<class name="com.emotion.tests.CaptionTypeTests"/>
+		</classes>
+	</test>
+	
+<!--  	<test name="Collection Manager">
+		<classes>
+			<class name="com.emotion.tests.CollectionTests"/>
+		</classes>
+	</test> -->
+
+	
+</suite> 

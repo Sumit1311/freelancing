@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [MMOD Automation]" parallel="none">
+  <listeners>
+    <listener class-name="com.emotion.core.TesngListener"/>
+  </listeners>
+  <test name="Manage Organizations(failed)" parallel="none">
+    <classes>
+      <class name="com.emotion.tests.LoginTests">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.emotion.tests.LoginTests -->
+      <class name="com.emotion.tests.OrganizationTests">
+        <methods>
+          <include name="setUp"/>
+          <include name="verifyAddOrganization"/>
+        </methods>
+      </class> <!-- com.emotion.tests.OrganizationTests -->
+    </classes>
+  </test> <!-- Manage Organizations(failed) -->
+</suite> <!-- Failed suite [MMOD Automation] -->

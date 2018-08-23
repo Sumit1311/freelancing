@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<Pages>
+	<LoginPage>
+		<txtUserName by="name">username</txtUserName>
+		<txtPassword by="name">password</txtPassword>
+		<bttnLogin by="id">enter</bttnLogin>
+		<linkSignOut by="linktext">Log out</linkSignOut>
+		<labelLoginMessage by="classname">errorMess</labelLoginMessage>
+	</LoginPage>
+	
+	<Home>
+		<linkHome by="linktext">Home</linkHome>
+		<listCollectionTree by="id">side_coll_list</listCollectionTree>
+		<Collection>
+			<bttnImageView by="id">BtnImages</bttnImageView>
+			<bttnImageTextView by="id">BtnImageText</bttnImageTextView>
+			<optAssestCommands by="name">asset_commands</optAssestCommands>
+			<bttnRunCommand by="name">go</bttnRunCommand>
+			<listAssets by="id">columncont</listAssets>
+			<imgAssetCheckbox by="name">selected_light_</imgAssetCheckbox>
+			<bttnCollectionSelectAllTop by="id">SelectAllButtonTop</bttnCollectionSelectAllTop>
+			<labelWinAlert by="xpath">//*[@id='win_alert']/div[2]</labelWinAlert>
+			<bttnYuiAlert by="id">yui-gen0-button</bttnYuiAlert>
+			<DownloadAssetPage>
+				<optSelectTranformationType by="id">imageTransformationOptions</optSelectTranformationType>
+				<bttnDoTransformation by="id">do_transformation</bttnDoTransformation>
+				<bttnDownloadReturn by="id">returnBtn</bttnDownloadReturn>
+				<msgError by="xpath">.//*[@id='m_cellErrorMessage']/div[2]</msgError>
+			</DownloadAssetPage>
+			<ExportMetadatapage>
+				<txtExportName by="id">txtExportName</txtExportName>
+				<bttnExportProceed by="id">m_btnProceed</bttnExportProceed>
+				<bttnExportCancel by="id">m_btnCancel</bttnExportCancel>
+				<labelExportStatus by="id">warnMessage</labelExportStatus>
+				<labelStatusDetails by="id">displayStatusDetails</labelStatusDetails>
+				<labelShipmentNumber by ="xpath">.//*[@id='m_PanelMain']/table/tbody/tr/td/h4</labelShipmentNumber>
+				
+			</ExportMetadatapage>
+			<DeleteItemsPage>
+				<bttnTrashItems by="name">trashitems</bttnTrashItems>
+				<chkboxSendLightBoxMessage by="name">send_lightbox_message</chkboxSendLightBoxMessage>
+				<chkboxSendCartMessage by="name">send_cart_message</chkboxSendCartMessage>
+				<chkboxSendProjectMessage by="name">send_project_message</chkboxSendProjectMessage>
+				<txtAssetDeleteLightboxMsg by="name">lightbox_text</txtAssetDeleteLightboxMsg>
+				<txtAssetDeleteCartMsg by="name">shopping_cart_text</txtAssetDeleteCartMsg>
+				<txtAssetDeleteProjectMsg by="name">project_text</txtAssetDeleteProjectMsg>
+				<labelDeleteAssetMsg by="xpath">//*[@id='m_PanelMain']/table/tbody/tr/td</labelDeleteAssetMsg>
+			</DeleteItemsPage>
+			<PrintContactSheetPage>
+				<linkTransactionIdContactSheet by="id">transactionIdLnk</linkTransactionIdContactSheet>
+			</PrintContactSheetPage>
+			<CopyAssetPage>
+				<optSelectCopyCollection by="name">collections</optSelectCopyCollection>
+				<checkboxCopyAsShortcut by="name">copyShortcut</checkboxCopyAsShortcut>
+				<bttnCopyContinue by="name">migrate_button</bttnCopyContinue>
+				<txtCopyTaskName by="id">m_hiddenTaskName</txtCopyTaskName>
+				<txtCopyTaskDescription by="id">m_hiddenNewDesc</txtCopyTaskDescription>
+				<bttnCreateCopyTask by="name">Submit</bttnCreateCopyTask>
+				<bttnCancelCopyTask by="name">Cancel</bttnCancelCopyTask>
+				<labelMsgMigration by="xpath">//*[@id='m_PanelMain']/table/tbody/tr/td/form/table/tbody/tr[1]/td</labelMsgMigration>
+			</CopyAssetPage>
+			<TransmitPage>
+				<txtTransmitTo by="name">tointernal</txtTransmitTo>
+				<chkBoxTransmitCCSelf by="name">cc</chkBoxTransmitCCSelf>
+				<txtTransmitSubject by="name">subject</txtTransmitSubject>
+				<txtTransmitMessage by="name">message</txtTransmitMessage>
+				<bttnTransmitSend by="xpath">//input[@value='Send']</bttnTransmitSend>
+				<bttnTransmitCancel by="xpath">//input[@value='Cancel']</bttnTransmitCancel>
+				<bttnTransmitSelectUsers by="name">Select</bttnTransmitSelectUsers>
+				<chekboxTransmitAssets by="name">selected_light_</chekboxTransmitAssets>
+				<labelTransmitAssetsId by="classname">metadataAltFieldValue</labelTransmitAssetsId>
+				<UserFilterWindow>
+					<txtTransmitUserFilter by="id">userFilter</txtTransmitUserFilter>
+					<optTransmitRecieverUsername by="name">receiver_user_name</optTransmitRecieverUsername>
+					<bttnTransmitAddMembers by="name">add_members</bttnTransmitAddMembers>
+				</UserFilterWindow>
+				<bttnTransmitRemove by="name">remove_from_transmit</bttnTransmitRemove>
+				<labelTransmitAssetMsg by="classname">message</labelTransmitAssetMsg>
+			</TransmitPage>
+			
+			<OrderPages>
+			<txtQuestion1 by="name">info_1</txtQuestion1>
+			<txtQuestion2 by="name">info_2</txtQuestion2>
+			<txtQuestion3 by="name">info_3</txtQuestion3>
+			<ddlQuestion4 by="name">criteria_1</ddlQuestion4>
+			<bttnNext by ="name">go</bttnNext>
+			
+			<bttnOrderNow by="xpath">//input[@value='Order Now']</bttnOrderNow>
+			<bttnAddToCart by="xpath">//input[@value='Add To Cart']</bttnAddToCart>
+			
+			<ddlProject by="name">project_id</ddlProject>
+			
+			<optDeliveryMethodAddToProject by="xpath">.//*[@id='m_PanelMain']/table/tbody/tr/td/form/ul/table/tbody/tr[1]/td[1]/input</optDeliveryMethodAddToProject>
+			<optDeliveryMethodCDRom by="xpath">.//*[@id='m_PanelMain']/table/tbody/tr/td/form/ul/table/tbody/tr[2]/td[1]/input</optDeliveryMethodCDRom>
+			<optDeliveryMethodEmail by="xpath">.//*[@id='m_PanelMain']/table/tbody/tr/td/form/ul/table/tbody/tr[3]/td[1]/input</optDeliveryMethodEmail>
+			<optDeliveryMethodOnline by="xpath">.//*[@id='m_PanelMain']/table/tbody/tr/td/form/ul/table/tbody/tr[4]/td[1]/input</optDeliveryMethodOnline>
+			<optDeliveryMethodSource by="xpath">.//*[@id='m_PanelMain']/table/tbody/tr/td/form/ul/table/tbody/tr[5]/td[1]/input</optDeliveryMethodSource>
+			
+			<bttnContinue1 by ="name">go</bttnContinue1>
+			
+			<ddlDeliveryFormat0 by="name">search_results_deliveryformat__0</ddlDeliveryFormat0>
+			<ddlDeliveryFormat1 by="name">search_results_deliveryformat__1</ddlDeliveryFormat1>
+			<bttnContinue2 by ="name">go</bttnContinue2>
+			
+			<linkSelectAllCart by="id">SelectAllButtonTop</linkSelectAllCart>
+			<bttnOrderSelectedCart by="xpath">//input[@value='Order Selected']</bttnOrderSelectedCart>
+			
+			</OrderPages>
+			
+			<PickUp>
+			<tableTransactionDetails by ="id">m_PanelMain</tableTransactionDetails>
+			<linkPickup by="linktext">Pickup</linkPickup>
+			<linkPickupOrder by="id">tab_orders</linkPickupOrder>
+			<linkPickupDownLoads by="id">tab_downloads</linkPickupDownLoads>
+			<linkPickupExportedMetadata by="id">tab_export_metadata</linkPickupExportedMetadata>
+			<dgdataGrid by="id">dg_dataGrid</dgdataGrid>
+			
+			</PickUp>
+			
+			<Captioning>
+			<txtCaptionDescription by ="id">large_06_control</txtCaptionDescription>
+			<bttnCaptionGo by ="id">m_btnGoTop</bttnCaptionGo>
+			</Captioning>
+		</Collection>
+	</Home>
+	
+	<AdminPage>
+		<linkAdmin by="linktext">Admin</linkAdmin>
+		<linkCollectionManager by="partiallinktext">Collection Manager</linkCollectionManager>
+		<linkCaptionTypeManager by="partiallinktext">Caption Type Manager</linkCaptionTypeManager>
+		<linkUserRoleManager by="partiallinktext">User Role Manager</linkUserRoleManager>
+		<linkManageUsers by="partiallinktext">Manage Users</linkManageUsers>
+		<linkAccountManagement by="linktext">Account Management</linkAccountManagement>
+		<linkManageOrganizations by="partiallinktext">Manage Organizations</linkManageOrganizations>
+		<linkManagerPermissions by="partiallinktext">Permission Manager</linkManagerPermissions>
+		<linkFunctionalPermissionsManager by="partiallinktext">Functional Permissions Manager</linkFunctionalPermissionsManager>
+		<CollectionManagerPage>
+			<bttnCreateCollection by="xpath">//input[@value='Create New']</bttnCreateCollection>
+			<tableCollection by="xpath">//*[@id='m_PanelMain']/table/tbody/tr/td/form/table/tbody</tableCollection>
+			<bttnDeleteCollection by="xpath">//input[@value='Delete']</bttnDeleteCollection>
+			<bttnEditCollection by="xpath">//input[@value='Settings']</bttnEditCollection>
+			<EditCollectioSettingsPage>
+				<txtEditCollectionName by="name">collection_desc</txtEditCollectionName>
+				<txtEditDescription by="name">long_description</txtEditDescription>
+				<optArchiveList by="name">archive_list</optArchiveList>
+				<optLicenceTypeList by="name">license_type_list</optLicenceTypeList>
+				<optControlTable by="name">control_table_list</optControlTable>
+				<optDeliveryType by="name">delivery_type_list</optDeliveryType>
+				<bttnUpdateCollection by="name">do_save</bttnUpdateCollection>
+			</EditCollectioSettingsPage>
+			<bttnEditPermissionsCollection by="xpath">//input[@value='Permissions']</bttnEditPermissionsCollection>
+			<EditCollectionPermissionPage>
+				<bttnAddMemberCollection by="name">add_member</bttnAddMemberCollection>
+				<AddUserPage>
+					<txtFilterUserCollection by="id">filter_names</txtFilterUserCollection>
+					<optSelectAddUserNamesCollection by="id">select_name</optSelectAddUserNamesCollection>
+					<bttnAddSelectedUsersCollection by="id">add_members</bttnAddSelectedUsersCollection>
+				</AddUserPage>
+				<bttnRemoveMemberCollection by="name">remove_member</bttnRemoveMemberCollection>
+				<bttnModifyPermissionCollection by="name">modify_permissions</bttnModifyPermissionCollection>
+				<ModifyCollectionPermissionPage>
+					<selectCollectionUsers by="id">select_name</selectCollectionUsers>
+					<chkboxEditCollection by="xpath">//input[@value="edit"]</chkboxEditCollection>
+					<chkboxQualityCollection by="xpath">//input[@value="quality"]</chkboxQualityCollection>
+					<chkboxPreviewCollection by="xpath">//input[@value="preview"]</chkboxPreviewCollection>
+					<chkboxDownloadCollection by="xpath">//input[@value="download"]</chkboxDownloadCollection>
+					<chkboxOrderCollection by="xpath">//input[@value="order"]</chkboxOrderCollection>
+					<chkboxReassignCollection by="xpath">//input[@value="reassign"]</chkboxReassignCollection>
+					<chkboxTransmitCollection by="xpath">//input[@value="transmit_externally"]</chkboxTransmitCollection>
+					<chkboxHistoryCollection by="xpath">//input[@value="view_history"]</chkboxHistoryCollection>
+					<chkboxPublicURLCollection by="xpath">//input[@value="public_urls"]</chkboxPublicURLCollection>
+					<chkboxDeleteCollection by="xpath">//input[@value="delete"]</chkboxDeleteCollection>
+					<bttnSavePermissionCollection by="xpath">//input[@value="Save"]</bttnSavePermissionCollection>
+					<bttnSavePermissionExitCollection by="xpath">//input[@value="Save &amp; Exit"]</bttnSavePermissionExitCollection>
+				</ModifyCollectionPermissionPage>
+			</EditCollectionPermissionPage>
+			<bttnCommitDeleteCollection by="name">CommitDelete</bttnCommitDeleteCollection>
+
+			<NewCollectionPage>
+				<txtNewCollectionName by="name">newCollectionName</txtNewCollectionName>
+				<txtAddDescription by="xpath">//table/tbody/tr[3]/td[2]/textarea</txtAddDescription>
+				<selectOrganization by="name">organization_id</selectOrganization>
+				<selectCaptiontype by="name">caption_type_name</selectCaptiontype>
+				<chkboxQualityCheck by="name">requires_quality_check</chkboxQualityCheck>
+				<linkAddThumbnailText by="id">showDlg</linkAddThumbnailText>
+				<ContainerThumbnailText by="id">dialogContainer_h</ContainerThumbnailText>
+				<txtThumbnailBgColor by="id">thumbnailBgColor</txtThumbnailBgColor>
+				<bttnSaveThumbnailText by="id">yui-gen0-button</bttnSaveThumbnailText>
+				<bttnAddCollection by="name">submit</bttnAddCollection>
+				<chkboxWatermarkEnable by="name">watermarkCollection</chkboxWatermarkEnable>
+				<selectWatermarkImage by="id">watermarkImageSelect</selectWatermarkImage>
+				<selectWatermarkPosition by="id">watermarkPosition</selectWatermarkPosition>
+				<selectWatermarkTile by="id">watermarkTileOption</selectWatermarkTile>
+				<selectWatermarkBlueChannel by="id">watermarkBlueChannel</selectWatermarkBlueChannel>
+			</NewCollectionPage>
+		</CollectionManagerPage>
+		
+		<CreateCaptionType>
+			<txtNewCaptionType by="name">new_captiontype_description</txtNewCaptionType>
+            <bttnCreateCaptionType by="name">add_cp</bttnCreateCaptionType>
+            <listExistingCaptionType by="name">caption_type_name</listExistingCaptionType>
+            <bttnCaptionTypeEdit by="name">edit_cp</bttnCaptionTypeEdit>
+            <bttnViews by="xpath">//input[@value='Views']</bttnViews>
+            <bttnEditImagesText by="xpath">//body/div/table/tbody/tr/td/table/tbody/tr[3]/td/table/tbody/tr/td[2]/div[2]/table/tbody/tr[2]/td/form/table/tbody/tr[1]/td[3]/input[1] </bttnEditImagesText>
+            <listTemplateSelect by="name">template_name</listTemplateSelect>
+                  
+            <linkACaptionTypeManager by="linktext">Back to Caption Type Manager</linkACaptionTypeManager>
+            <selectViewAllFields by="name">all_fields</selectViewAllFields>
+            <bttnViewAddtoArea1 by="xpath">//input[@value='Add To Area 1']</bttnViewAddtoArea1>      
+            <bttnOkTextViewPage by="xpath">//input[@value='Ok']</bttnOkTextViewPage>
+            <bttnSaveEditViews by="name">do_save</bttnSaveEditViews>
+            <bttnSaveEditingCaptionType by="name">save</bttnSaveEditingCaptionType>  
+            <linkACaptionTypeManager by="linktext">Back to Caption Type Manager</linkACaptionTypeManager>   
+            <bttnRegenerateAllViewsAndSearchPage by="name">regenerate_all_pages</bttnRegenerateAllViewsAndSearchPage>
+            <bttnDeleteCaptionType by="name">delete_cp</bttnDeleteCaptionType>
+            <bttnCloneCaptionType by="name">clone_cp</bttnCloneCaptionType>
+            <bttnSaveCloneCaptionType by="name">save</bttnSaveCloneCaptionType>
+            <bttnMetadataCaptionType by="xpath">//input[@value='Metadata']</bttnMetadataCaptionType> 
+            <bttnMetadataAddnewField by="name">NewButton</bttnMetadataAddnewField>
+            <txtAddNewMetaDatafield by="name">field_name</txtAddNewMetaDatafield>
+            <txtDescriptionMetaDataAddfield by="name">field_description</txtDescriptionMetaDataAddfield>
+            <listMethodSelectMetaDataAddfield  by="name">search_method</listMethodSelectMetaDataAddfield>
+            <listSizeSelectMetaDataAddfield  by="name">field_size</listSizeSelectMetaDataAddfield>
+            <listSortableSelectMetaDataAddfield  by="name">field_sortable</listSortableSelectMetaDataAddfield>
+            <listMetadatatypeSelectMetaDataAddfield  by="name">field_metadata_type</listMetadatatypeSelectMetaDataAddfield>
+            <listMetadataPropertieSelect  by="name">field_metadata_property</listMetadataPropertieSelect>
+            
+            <txtDefaultEnterMetaDatafield by="name">field_default</txtDefaultEnterMetaDatafield>
+            <chkboxRequiredFieldValidation by="name">is_required</chkboxRequiredFieldValidation>
+            <chkboxNumberFieldValidation by="name">is_number</chkboxNumberFieldValidation>
+            <chkboxDisplayURLsFieldValidation by="name">is_number</chkboxDisplayURLsFieldValidation>
+            <optTextEntryMetadaAddfield by="xpath">//input[@value='text']</optTextEntryMetadaAddfield> 
+            <optTextAreaMetadaAddfield by="xpath">//input[@value='textarea']</optTextAreaMetadaAddfield>
+            <optRedioButtonMetadaAddfield by="xpath">//input[@value='radio']</optRedioButtonMetadaAddfield>
+            <optcheckboxMetadaAddfield by="xpath">//input[@value='checkbox']</optcheckboxMetadaAddfield>
+            <bttnOkMetadaAddfield by="xpath">//input[@value='Ok']</bttnOkMetadaAddfield>
+            <bttnSaveMetadataAddnewField by="name">do_save</bttnSaveMetadataAddnewField>
+        </CreateCaptionType>
+       
+        <OrderManagement>
+         <bttnRecentOrders by="name">order_query</bttnRecentOrders>
+         <optCDRomDelivery by="name">deliverymethod</optCDRomDelivery>
+         <bttnContinueDelivery by="name">go</bttnContinueDelivery>
+         <txtOrderShipTo by="name">shiptoname</txtOrderShipTo>
+         <txtOrganizationOrder by="name">shiptoorganizationname</txtOrganizationOrder>
+         <txtAddressOrder by="name">shiptoaddress1</txtAddressOrder>
+         <txtCityOrder by="name">shiptocity</txtCityOrder>
+         <listStateOrder  by="name">shiptostate</listStateOrder>
+         <txtZipCodeOrder by="name">shiptozipcode</txtZipCodeOrder>
+         
+         
+         
+        </OrderManagement>
+		<ManageUsers>		
+		<txtUsername by="name">user_name</txtUsername>
+		<txtFirstname by="name">first_name</txtFirstname>
+		<txtLastname by="name">last_name</txtLastname>
+		<ddlCategory by="name">category</ddlCategory>
+		<ddlStatus by="name">status</ddlStatus>
+		<ddlOrgId by="name">organization_id</ddlOrgId>
+		<ddlCountry by="name">country</ddlCountry>
+		<ddlCity by="name">city</ddlCity>
+		<txtPhone by="name">phone</txtPhone>		
+		<bttnSearch by="xpath">//input[@value='Search']</bttnSearch>
+		<bttnAddUser by="xpath">//input[@value="Add User"]</bttnAddUser>
+		<txtUserloginName by="name">edit_user</txtUserloginName>
+		<bttEditUser by="name">edit_user_button</bttEditUser>
+		</ManageUsers>
+		
+		<AddUser>
+		<bttnAddUser by="name">add_user</bttnAddUser>
+		<txtAddUserLogin by="name">user_name</txtAddUserLogin>
+		<txtAddUserPwd by="name">password</txtAddUserPwd>
+		<txtAddUserConfPassword by="name">password_again</txtAddUserConfPassword>
+		<txtAddUserFirst by="name">first_name</txtAddUserFirst>
+		<txtAddUserMiddle by="name">middle_name</txtAddUserMiddle>
+		<txtAddUserLast by="name">last_name</txtAddUserLast>
+		<ddlAddUserRole by="name">category</ddlAddUserRole>
+		<ddlAddUserStatus by="name">status</ddlAddUserStatus>
+		<ddlAddUserOrganization by="name">group</ddlAddUserOrganization>
+		<txtAddUserAddress1 by="name">address_1</txtAddUserAddress1> 
+		<txtAddUserCity by="name">city</txtAddUserCity>
+		<txtAddUserState by="name">state</txtAddUserState>
+		<txtAddUserZip by="name">zip</txtAddUserZip>
+		<ddlAddUserCountry by="name">country</ddlAddUserCountry>
+		<txtAddUserEmail by="name">email</txtAddUserEmail>
+		<txtAddUserPhone by="name">phone</txtAddUserPhone>
+		<bttnAddUserSaveExit by="name">do_add_and_exit</bttnAddUserSaveExit>
+		</AddUser>
+			
+		<UserRoleManagerPage>
+		<txtUserCategoryName by="name">userCategoryName</txtUserCategoryName>
+		<txtUserCategoryDesc by="name">userCategoryDesc</txtUserCategoryDesc>	
+		<bttnAddUserRole by="name">add_user</bttnAddUserRole>
+		<bttnCloneUserRole by="name">clone_user</bttnCloneUserRole>
+		<bttnUpdateUserRole by="name">edit</bttnUpdateUserRole>
+		<bttnDeleteUserRole by="name">remove_user</bttnDeleteUserRole>
+		<listExistingUserRoles by="name">existingUserCategoryName</listExistingUserRoles>
+		<winAlertMessage by="xpath">id('win_alert')/x:div[2]</winAlertMessage>
+		<bttnMessageOk by="id">yui-gen0-button</bttnMessageOk>
+		</UserRoleManagerPage>
+		
+		<ManageOrganizations> 
+	    <bttnAddNewOrganization by="xpath">//input[@value="Add New Organization"]</bttnAddNewOrganization> 
+	    <txtName by="name">name</txtName>
+	    <txtPointofContactFirst by="name">contact_first_name</txtPointofContactFirst>  
+	    <txtPointofContactMiddle by="name">contact_middle_name</txtPointofContactMiddle>
+	    <txtPointofContactLast by="name">contact_last_name</txtPointofContactLast>
+	    <txtContactEmail by="name">contact_email</txtContactEmail>
+	    <txtContactPhone by="name">contact_phone</txtContactPhone>
+	    <txtContactFax by="name">contact_fax</txtContactFax>
+	    <txtBillingAddress by="name">billing_address_1</txtBillingAddress>
+	    <txtCity by="name">billing_city</txtCity>
+	    <txtState by="name">billing_state</txtState>
+	    <txtZip by="name">billing_zip</txtZip>
+	    <ddlSelectCountry by="name">billing_country</ddlSelectCountry>
+	    <bttnCopyBillingAddress by="xpath">//input[@value="Copy Billing Address"]</bttnCopyBillingAddress>
+	    <txtShippingAddress by="name">shipping_address_1</txtShippingAddress>
+	    <txtCity1 by="name">shipping_city</txtCity1>
+	    <txtState1 by="name">shipping_state</txtState1>
+	    <txtZip1 by="name">shipping_zip</txtZip1>
+	    <ddlSelectCountry1 by="name">shipping_country</ddlSelectCountry1>
+        <bttnAdd by="name">do_add.x</bttnAdd> 
+        
+	    <bttnAddNewUser by="xpath">//input[@value="Add New Users"</bttnAddNewUser>
+	    </ManageOrganizations>
+	    
+	    <ManagePermissions>
+	    <txtNewPermissionName by="name">newPermissionName</txtNewPermissionName>
+	    <bttnInsert by="xpath">//input[@value="Insert"]</bttnInsert>
+	    <ddlPermissionName by="name">removePermissionName</ddlPermissionName>
+	    <bttnRemove by="xpath">//input[@value="Remove"]</bttnRemove>
+	    
+	    <txtSearchUser by="id">filter_names</txtSearchUser>
+	    <optSelectName by="id">select_name</optSelectName>
+	    <bttnModifyPermissions by="name">modify_permissions</bttnModifyPermissions>
+	    </ManagePermissions>	
+		
+	</AdminPage>
+		
+</Pages>

@@ -1,0 +1,92 @@
+2014-11-12 18:03:58,548 - com.emotion.core.Log - ERROR - FAILED | TEST ID : 1 | User is not logged in. Expected was 'Media Management On Demand - Home' but was 'Login'
+2014-11-12 18:04:01,435 - com.emotion.core.Log - ERROR - FAILED | TEST ID : 1 | User is not logged in. Expected was 'Media Management On Demand - Home' but was 'Login'
+2014-11-12 18:04:04,217 - com.emotion.core.Log - ERROR - FAILED | TEST ID : 1 | User is not logged in. Expected was 'Media Management On Demand - Home' but was 'Login'
+2014-11-12 18:04:07,913 - com.emotion.core.Log - ERROR - FAILED | TEST ID : 1 | User is not logged in. Expected was 'Media Management On Demand - Home' but was 'Login'
+2014-11-12 18:04:10,820 - com.emotion.core.Log - ERROR - FAILED | TEST ID : 1 | User is not logged in. Expected was 'Media Management On Demand - Home' but was 'Login'
+2014-11-12 18:04:14,591 - com.emotion.core.Log - ERROR - FAILED | TEST ID : 1 | User is not logged in. Expected was 'Media Management On Demand - Home' but was 'Login'
+2014-11-12 18:04:17,754 - com.emotion.core.Log - ERROR - FAILED | TEST ID : 1 | User is not logged in. Expected was 'Media Management On Demand - Home' but was 'Login'
+2014-11-14 17:46:59,079 - com.emotion.core.Log - ERROR - java.lang.ClassNotFoundException: com.microsoft.sqlserver.jdbc.SQLServerDriver
+2014-11-17 11:53:02,304 - com.emotion.core.Log - ERROR - com.microsoft.sqlserver.jdbc.SQLServerException: The port number  is not valid.
+2014-11-17 11:54:52,967 - com.emotion.core.Log - ERROR - com.microsoft.sqlserver.jdbc.SQLServerException: The port number  is not valid.
+2014-11-17 11:56:00,936 - com.emotion.core.Log - ERROR - com.microsoft.sqlserver.jdbc.SQLServerException: The port number  is not valid.
+2014-11-21 15:27:59,681 - com.emotion.core.Log - ERROR - The element type "linkCollectionManager" must be terminated by the matching end-tag "</linkCollectionManager>".
+2014-11-21 15:28:19,798 - com.emotion.core.Log - ERROR - 
+2014-11-24 15:07:29,733 - com.emotion.core.Log - ERROR - Element tableCollection/tr[9]/td[2]/input[3] not found in page object repository file
+2014-11-24 15:24:09,423 - com.emotion.core.Log - ERROR - Element null/tr[9]/td[2]/input[3] not found in page object repository file
+2014-11-24 15:29:10,909 - com.emotion.core.Log - ERROR - Element //*[@id='m_PanelMain']/table/tbody/tr/td/form/table/tbody/tr[9]/td[2]/input[3] not found in page object repository file
+2014-12-09 19:29:27,112 - com.emotion.core.Log - ERROR - Unable to find element 'By.xpath: //*[@id='win_alert']/div[2]' by 'xpath'
+2015-02-04 19:16:09,624 - com.emotion.core.Log - ERROR - The element type "r" must be terminated by the matching end-tag "</r>".
+2015-02-04 19:17:38,059 - com.emotion.core.Log - ERROR - java.io.FileNotFoundException: testdata\Collection Manager\Collection_Data.xls (The system cannot find the file specified)
+2015-02-04 19:17:38,102 - com.emotion.core.Log - ERROR - java.io.FileNotFoundException: testdata\Collection Manager\Collection_Data.xls (The system cannot find the file specified)
+2015-02-04 19:17:38,167 - com.emotion.core.Log - ERROR - java.io.FileNotFoundException: testdata\Collection Manager\Collection_data.xls (The system cannot find the file specified)
+2015-02-04 19:19:27,010 - com.emotion.core.Log - ERROR - Element ContainerThumbnailText not found in page object repository file
+2015-02-04 19:25:36,237 - com.emotion.core.Log - ERROR - Element bttnSaveThumbnailText not found in page object repository file
+2015-02-11 16:33:10,256 - com.emotion.core.Log - ERROR - Element user_name not found in page object repository file
+2015-02-11 16:33:54,186 - com.emotion.core.Log - ERROR - Element user_name not found in page object repository file
+2015-02-11 16:37:07,054 - com.emotion.core.Log - ERROR - Element user_name not found in page object repository file
+2015-02-11 16:38:15,990 - com.emotion.core.Log - ERROR - Element user_name not found in page object repository file
+2015-02-11 16:39:27,368 - com.emotion.core.Log - ERROR - Element user_name not found in page object repository file
+2015-02-11 16:41:06,409 - com.emotion.core.Log - ERROR - Element user_name not found in page object repository file
+2015-05-14 18:26:50,508 - com.emotion.core.Log - ERROR - Element type "txtCity1" must be followed by either attribute specifications, ">" or "/>".
+2015-06-02 17:13:35,719 - com.emotion.core.Log - ERROR - Element type "txtCity1" must be followed by either attribute specifications, ">" or "/>".
+2015-06-02 17:17:33,886 - com.emotion.core.Log - ERROR - Element type "txtCity1" must be followed by either attribute specifications, ">" or "/>".
+2015-06-03 14:45:47,038 - com.emotion.core.Log - ERROR - Element type "txtCity1" must be followed by either attribute specifications, ">" or "/>".
+2015-06-03 15:49:29,137 - com.emotion.core.Log - ERROR - Element type "txtCity1" must be followed by either attribute specifications, ">" or "/>".
+2015-06-03 15:51:38,778 - com.emotion.core.Log - ERROR - Element type "txtCity1" must be followed by either attribute specifications, ">" or "/>".
+2015-06-03 15:55:35,151 - com.emotion.core.Log - ERROR - Open quote is expected for attribute "by" associated with an  element type  "bttSaveandanotherOrganization".
+2015-06-03 16:10:51,885 - com.emotion.core.Log - ERROR - Open quote is expected for attribute "by" associated with an  element type  "bttSaveandanotherOrganization".
+2015-06-03 16:34:47,603 - com.emotion.core.Log - ERROR - Open quote is expected for attribute "by" associated with an  element type  "linkcaptiontype".
+2015-06-03 16:36:12,472 - com.emotion.core.Log - ERROR - Open quote is expected for attribute "by" associated with an  element type  "linkcaptiontype".
+2015-06-03 16:40:22,284 - com.emotion.core.Log - ERROR - Open quote is expected for attribute "by" associated with an  element type  "linkcaptiontype".
+2015-06-03 16:49:21,038 - com.emotion.core.Log - ERROR - Open quote is expected for attribute "by" associated with an  element type  "linkcaptiontype".
+2015-06-04 15:30:39,499 - com.emotion.core.Log - ERROR - Element txtNewCaptionType not found in page object repository file
+2015-06-04 15:39:25,327 - com.emotion.core.Log - ERROR - FAILED | TEST ID : 1 | User is logged in with invalid crediantials. Expected was 'Login' but was 'Media Management On Demand - Caption Type Manager'
+2015-06-05 16:13:45,441 - com.emotion.core.Log - ERROR - FAILED | TEST ID : 1 | User is logged in with invalid crediantials. Expected was 'Login' but was 'Media Management On Demand - Caption Type Manager'
+2015-06-08 15:24:11,768 - com.emotion.core.Log - ERROR - FAILED | TEST ID : 1 | User is logged in with invalid crediantials. Expected was 'Login' but was 'Media Management On Demand - Caption Type Manager'
+2015-06-08 15:24:23,253 - com.emotion.core.Log - ERROR - FAILED | TEST ID : 1 | User is logged in with invalid crediantials. Expected was 'Login' but was 'Media Management On Demand - Caption Type Manager'
+2015-06-08 15:24:41,618 - com.emotion.core.Log - ERROR - FAILED | TEST ID : 1 | User is logged in with invalid crediantials. Expected was 'Login' but was 'Media Management On Demand - Caption Type Manager'
+2015-06-08 15:58:37,209 - com.emotion.core.Log - ERROR - Element listExistingCaptionType not found in page object repository file
+2015-06-08 15:58:43,423 - com.emotion.core.Log - ERROR - Element listExistingCaptionType not found in page object repository file
+2015-06-08 15:58:49,660 - com.emotion.core.Log - ERROR - Element listExistingCaptionType not found in page object repository file
+2015-06-08 18:13:58,323 - com.emotion.core.Log - ERROR - Element listExistingCaptionType not found in page object repository file
+2015-06-08 18:14:04,753 - com.emotion.core.Log - ERROR - Element listExistingCaptionType not found in page object repository file
+2015-06-08 18:14:10,940 - com.emotion.core.Log - ERROR - Element listExistingCaptionType not found in page object repository file
+2015-06-08 18:16:03,446 - com.emotion.core.Log - ERROR - Element listExistingCaptionType not found in page object repository file
+2015-06-08 18:16:10,871 - com.emotion.core.Log - ERROR - Element listExistingCaptionType not found in page object repository file
+2015-06-08 18:16:17,657 - com.emotion.core.Log - ERROR - Element listExistingCaptionType not found in page object repository file
+2015-06-11 16:16:58,343 - com.emotion.core.Log - ERROR - Unable to find element 'By.xpath: .//*[@id='m_PanelMain']/table/tbody/tr/td/form/ul/table/tbody/tr[1]/td[1]/input' by 'xpath'
+2015-06-11 16:21:37,997 - com.emotion.core.Log - ERROR - Unable to find element 'By.xpath: .//*[@id='m_PanelMain']/table/tbody/tr/td/form/ul/table/tbody/tr[1]/td[1]/input' by 'xpath'
+2015-06-11 16:26:42,468 - com.emotion.core.Log - ERROR - Unable to find element 'By.xpath: .//*[@id='m_PanelMain']/table/tbody/tr/td/form/ul/table/tbody/tr[1]/td[1]/input' by 'xpath'
+2015-06-11 16:31:16,077 - com.emotion.core.Log - ERROR - Unable to find element 'By.xpath: .//*[@id='m_PanelMain']/table/tbody/tr/td/form/ul/table/tbody/tr[1]/td[1]/input' by 'xpath'
+2015-06-11 16:42:58,751 - com.emotion.core.Log - ERROR - Unable to find element 'By.name: save' by 'name'
+2015-06-11 16:45:12,426 - com.emotion.core.Log - ERROR - Unable to find element 'By.name: save' by 'name'
+2015-06-11 16:48:22,808 - com.emotion.core.Log - ERROR - Unable to find element 'By.name: save' by 'name'
+2015-06-12 11:26:33,747 - com.emotion.core.Log - ERROR - Unable to find element 'By.name: save' by 'name'
+2015-06-13 14:10:47,500 - com.emotion.core.Log - ERROR - Element  formsEditViewpage not found in page object repository file
+2015-06-18 11:01:13,817 - com.emotion.core.Log - ERROR - FAILED | TEST ID : 1 | Create caption type-AutomationCaptionType Message displayed was: The name AutomationCaptionType is already in use. Please select another.
+2015-06-18 11:01:43,865 - com.emotion.core.Log - ERROR - FAILED | TEST ID : 1 | Create caption type-AutomationCaptionType Message displayed was: The name AutomationCaptionType is already in use. Please select another.
+2015-06-18 12:28:43,753 - com.emotion.core.Log - ERROR - FAILED | TEST ID : 1 | Create caption type-AutomationCaptionType Message displayed was: The name AutomationCaptionType is already in use. Please select another.
+2015-06-18 12:29:13,115 - com.emotion.core.Log - ERROR - FAILED | TEST ID : 1 | Create caption type-AutomationCaptionType Message displayed was: The name AutomationCaptionType is already in use. Please select another.
+2015-06-18 17:37:48,844 - com.emotion.core.Log - ERROR - FAILED | TEST ID : 1 | Create caption type-AutomationCaptionType Message displayed was: The name AutomationCaptionType is already in use. Please select another.
+2015-06-18 17:38:26,649 - com.emotion.core.Log - ERROR - FAILED | TEST ID : 1 | Create caption type-AutomationCaptionType Message displayed was: The name AutomationCaptionType is already in use. Please select another.
+2015-06-19 11:31:52,001 - com.emotion.core.Log - ERROR - FAILED | TEST ID : 1 | Create caption type-AutomationCaptionType Message displayed was: The name AutomationCaptionType is already in use. Please select another.
+2015-06-19 11:32:21,737 - com.emotion.core.Log - ERROR - FAILED | TEST ID : 1 | Create caption type-AutomationCaptionType Message displayed was: The name AutomationCaptionType is already in use. Please select another.
+2015-06-24 13:15:20,034 - com.emotion.core.Log - ERROR - FAILED | TEST ID : 1 | Create caption type-AutomationCaptionType Message displayed was: The name AutomationCaptionType is already in use. Please select another.
+2015-11-02 15:47:14,153 - com.emotion.core.Log - ERROR - FAILED | TEST ID : 1 | Create caption type-puneTeam Message displayed was: The name puneTeam is already in use. Please select another.
+2015-11-07 18:08:39,206 - com.emotion.core.Log - ERROR - FAILED | TEST ID : 1 | Create caption type-puneTeam Message displayed was: The name puneTeam is already in use. Please select another.
+2015-11-26 18:40:50,566 - com.emotion.core.Log - ERROR - FAILED | TEST ID : 1 | Create caption type-puneTeam Message displayed was: The name puneTeam is already in use. Please select another.
+2015-12-02 20:19:29,221 - com.emotion.core.Log - ERROR - java.io.FileNotFoundException: testdata\OrderManagement\OrderManagement_data.xls (The system cannot find the file specified)
+2015-12-02 20:30:08,331 - com.emotion.core.Log - ERROR - java.io.FileNotFoundException: testdata\OrderManagement\OrderManagement_data.xls (The system cannot find the file specified)
+2015-12-02 20:37:02,676 - com.emotion.core.Log - ERROR - java.io.FileNotFoundException: testdata\OrderManagement\MyOrderHistorybyCDROMdelivery.xls (The system cannot find the file specified)
+2015-12-02 20:50:43,767 - com.emotion.core.Log - ERROR - java.io.FileNotFoundException: testdata\OrderManagement\MyOrderHistorybyCDROMdelivery.xls (The system cannot find the file specified)
+2015-12-02 23:01:43,911 - com.emotion.core.Log - ERROR - java.io.FileNotFoundException: testdata\OrderManagement\MyOrderHistorybyCDROMdelivery.xls (The system cannot find the file specified)
+2015-12-02 23:11:44,071 - com.emotion.core.Log - ERROR - java.io.FileNotFoundException: testdata\OrderManagement\MyOrderHistorybyCDROMdelivery.xls (The system cannot find the file specified)
+2015-12-02 23:29:50,601 - com.emotion.core.Log - ERROR - java.io.FileNotFoundException: testdata\OrderManagement\MyOrderHistorybyCDROMdelivery.xls (The system cannot find the file specified)
+2015-12-02 23:39:00,782 - com.emotion.core.Log - ERROR - java.io.FileNotFoundException: testdata\OrderManagement\MyOrderHistorybyCDROMdelivery.xls (The system cannot find the file specified)
+2015-12-02 23:45:35,160 - com.emotion.core.Log - ERROR - java.io.FileNotFoundException: testdata\OrderManagement\MyOrderHistorybyCDROMdelivery.xls (The system cannot find the file specified)
+2015-12-03 00:11:29,902 - com.emotion.core.Log - ERROR - java.io.FileNotFoundException: testdata\OrderManagement\CMyOrderHistory_CDROMdelivery.xls (The system cannot find the file specified)
+2015-12-03 10:13:33,593 - com.emotion.core.Log - ERROR - java.io.FileNotFoundException: testdata\OrderManagement\CMyOrderHistory_CDROMdelivery.xls (The system cannot find the file specified)
+2015-12-03 10:20:17,676 - com.emotion.core.Log - ERROR - java.io.FileNotFoundException: testdata\OrderManagement\MyOrderHistory_CDROMdelivery.xls (The system cannot find the file specified)
+2015-12-03 10:26:03,201 - com.emotion.core.Log - ERROR - java.io.FileNotFoundException: testdata\OrderManagement\MyOrderHistory_CDROMdelivery.xls (The system cannot find the file specified)
+2015-12-07 19:00:46,878 - com.emotion.core.Log - ERROR - FAILED | TEST ID : 1 | Create caption type-puneTeam Message displayed was: The name puneTeam is already in use. Please select another.
+2015-12-07 23:17:05,061 - com.emotion.core.Log - ERROR - FAILED | TEST ID : 1 | Create caption type-puneTeam Message displayed was: The name puneTeam is already in use. Please select another.

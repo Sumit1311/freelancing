@@ -1,0 +1,619 @@
+<html>
+<head>
+<title>TestNG:  Asset Operations Tests</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Asset Operations Tests</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>0/15/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Nov 26 18:57:26 IST 2015</td>
+</tr>
+<tr><td>Total time:</td><td>33 seconds (33138 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.emotion.tests.AssetOperationsTests.verifyAddToCartAndOrder()'><b>verifyAddToCartAndOrder</b><br>Test class: com.emotion.tests.AssetOperationsTests<br>Test method: TEST ID : 6 | verifyAddToCartAndOrder <br>Parameters: Cricket, 100040,100041, imagetext, Power Point Ready, test, test2, test3, internal, email, </td>
+<td><div><pre>com.emotion.core.FrameworkException: Collection not found: Cricket
+	at com.emotion.lib.Collection.selectCollection(Collection.java:46)
+	at com.emotion.tests.AssetOperationsTests.verifyAddToCartAndOrder(AssetOperationsTests.java:264)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1677435673", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1677435673'><pre>com.emotion.core.FrameworkException: Collection not found: Cricket
+	at com.emotion.lib.Collection.selectCollection(Collection.java:46)
+	at com.emotion.tests.AssetOperationsTests.verifyAddToCartAndOrder(AssetOperationsTests.java:264)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div></td>
+<td>1</td>
+<td>com.emotion.tests.AssetOperationsTests@560b70a8</td></tr>
+<tr>
+<td title='com.emotion.tests.AssetOperationsTests.verifyCaptionAsset()'><b>verifyCaptionAsset</b><br>Test class: com.emotion.tests.AssetOperationsTests<br>Test method: TEST ID : 14 | captionAsset <br>Parameters: LocalCollection, 100011, imagetext, Test Description from Automation, People</td>
+<td><div><pre>com.emotion.core.FrameworkException: Collection not found: LocalCollection
+	at com.emotion.lib.Collection.selectCollection(Collection.java:46)
+	at com.emotion.tests.AssetOperationsTests.verifyCaptionAsset(AssetOperationsTests.java:442)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace325455266", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace325455266'><pre>com.emotion.core.FrameworkException: Collection not found: LocalCollection
+	at com.emotion.lib.Collection.selectCollection(Collection.java:46)
+	at com.emotion.tests.AssetOperationsTests.verifyCaptionAsset(AssetOperationsTests.java:442)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div></td>
+<td>1</td>
+<td>com.emotion.tests.AssetOperationsTests@560b70a8</td></tr>
+<tr>
+<td title='com.emotion.tests.AssetOperationsTests.verifyCopyAsset()'><b>verifyCopyAsset</b><br>Test class: com.emotion.tests.AssetOperationsTests<br>Test method: TEST ID : 12 | copyAsset <br>Parameters: testCollection, 100063, imagetext, NewCollection, no, testCollectionTONewCollection, Automation Copy task</td>
+<td><div><pre>com.emotion.core.FrameworkException: Collection not found: testCollection
+	at com.emotion.lib.Collection.selectCollection(Collection.java:46)
+	at com.emotion.tests.AssetOperationsTests.verifyCopyAsset(AssetOperationsTests.java:375)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1257149765", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1257149765'><pre>com.emotion.core.FrameworkException: Collection not found: testCollection
+	at com.emotion.lib.Collection.selectCollection(Collection.java:46)
+	at com.emotion.tests.AssetOperationsTests.verifyCopyAsset(AssetOperationsTests.java:375)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div></td>
+<td>1</td>
+<td>com.emotion.tests.AssetOperationsTests@560b70a8</td></tr>
+<tr>
+<td title='com.emotion.tests.AssetOperationsTests.verifyCopyAsset()'><b>verifyCopyAsset</b><br>Test class: com.emotion.tests.AssetOperationsTests<br>Test method: TEST ID : 12 | copyAsset <br>Parameters: testCollection, 100064, imagetext, NewCollection, yes, testCollectionTONewCollection, Automation Copy task2</td>
+<td><div><pre>com.emotion.core.FrameworkException: Collection not found: testCollection
+	at com.emotion.lib.Collection.selectCollection(Collection.java:46)
+	at com.emotion.tests.AssetOperationsTests.verifyCopyAsset(AssetOperationsTests.java:375)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace310446344", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace310446344'><pre>com.emotion.core.FrameworkException: Collection not found: testCollection
+	at com.emotion.lib.Collection.selectCollection(Collection.java:46)
+	at com.emotion.tests.AssetOperationsTests.verifyCopyAsset(AssetOperationsTests.java:375)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div></td>
+<td>1</td>
+<td>com.emotion.tests.AssetOperationsTests@560b70a8</td></tr>
+<tr>
+<td title='com.emotion.tests.AssetOperationsTests.verifyDelete()'><b>verifyDelete</b><br>Test class: com.emotion.tests.AssetOperationsTests<br>Test method: TEST ID : 11 | verifyDelete <br>Parameters: LocalCollection, 100007,100008, imagetext, yes, yes, yes, Message to Lightbox from Automation, Message to Cart from Automation, Message to Project from Automation</td>
+<td><div><pre>com.emotion.core.FrameworkException: Collection not found: LocalCollection
+	at com.emotion.lib.Collection.selectCollection(Collection.java:46)
+	at com.emotion.tests.AssetOperationsTests.verifyDelete(AssetOperationsTests.java:343)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2013024286", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2013024286'><pre>com.emotion.core.FrameworkException: Collection not found: LocalCollection
+	at com.emotion.lib.Collection.selectCollection(Collection.java:46)
+	at com.emotion.tests.AssetOperationsTests.verifyDelete(AssetOperationsTests.java:343)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div></td>
+<td>1</td>
+<td>com.emotion.tests.AssetOperationsTests@560b70a8</td></tr>
+<tr>
+<td title='com.emotion.tests.AssetOperationsTests.verifyDownloadAsset()'><b>verifyDownloadAsset</b><br>Test class: com.emotion.tests.AssetOperationsTests<br>Test method: TEST ID : 1 | verifyDownloadAsset <br>Parameters: test123, 100051,100055, imagetext, All Transformations</td>
+<td><div><pre>com.emotion.core.FrameworkException: Collection not found: test123
+	at com.emotion.lib.Collection.selectCollection(Collection.java:46)
+	at com.emotion.tests.AssetOperationsTests.verifyDownloadAsset(AssetOperationsTests.java:37)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace824651265", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace824651265'><pre>com.emotion.core.FrameworkException: Collection not found: test123
+	at com.emotion.lib.Collection.selectCollection(Collection.java:46)
+	at com.emotion.tests.AssetOperationsTests.verifyDownloadAsset(AssetOperationsTests.java:37)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div></td>
+<td>1</td>
+<td>com.emotion.tests.AssetOperationsTests@560b70a8</td></tr>
+<tr>
+<td title='com.emotion.tests.AssetOperationsTests.verifyDownloadAsset()'><b>verifyDownloadAsset</b><br>Test class: com.emotion.tests.AssetOperationsTests<br>Test method: TEST ID : 1 | verifyDownloadAsset <br>Parameters: test123, 100051,100055, imagetext, Power Point Ready (BMP, 72ppi, 600x600 pixels)</td>
+<td><div><pre>com.emotion.core.FrameworkException: Collection not found: test123
+	at com.emotion.lib.Collection.selectCollection(Collection.java:46)
+	at com.emotion.tests.AssetOperationsTests.verifyDownloadAsset(AssetOperationsTests.java:37)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1428033134", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1428033134'><pre>com.emotion.core.FrameworkException: Collection not found: test123
+	at com.emotion.lib.Collection.selectCollection(Collection.java:46)
+	at com.emotion.tests.AssetOperationsTests.verifyDownloadAsset(AssetOperationsTests.java:37)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div></td>
+<td>1</td>
+<td>com.emotion.tests.AssetOperationsTests@560b70a8</td></tr>
+<tr>
+<td title='com.emotion.tests.AssetOperationsTests.verifyExportAllMetadata()'><b>verifyExportAllMetadata</b><br>Test class: com.emotion.tests.AssetOperationsTests<br>Test method: TEST ID : 4 | VerifyExportAllMetadata <br>Parameters: test123, imagetext, AutomationExportedALLMetadata</td>
+<td><div><pre>com.emotion.core.FrameworkException: Collection not found: test123
+	at com.emotion.lib.Collection.selectCollection(Collection.java:46)
+	at com.emotion.tests.AssetOperationsTests.verifyExportAllMetadata(AssetOperationsTests.java:173)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1637280884", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1637280884'><pre>com.emotion.core.FrameworkException: Collection not found: test123
+	at com.emotion.lib.Collection.selectCollection(Collection.java:46)
+	at com.emotion.tests.AssetOperationsTests.verifyExportAllMetadata(AssetOperationsTests.java:173)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div></td>
+<td>1</td>
+<td>com.emotion.tests.AssetOperationsTests@560b70a8</td></tr>
+<tr>
+<td title='com.emotion.tests.AssetOperationsTests.verifyExportMetadata()'><b>verifyExportMetadata</b><br>Test class: com.emotion.tests.AssetOperationsTests<br>Test method: TEST ID : 3 | VerifyExportMetadata <br>Parameters: test123, 100051,100055, imagetext, AutomationExportedMetadata</td>
+<td><div><pre>com.emotion.core.FrameworkException: Collection not found: test123
+	at com.emotion.lib.Collection.selectCollection(Collection.java:46)
+	at com.emotion.tests.AssetOperationsTests.verifyExportMetadata(AssetOperationsTests.java:137)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace20436400", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace20436400'><pre>com.emotion.core.FrameworkException: Collection not found: test123
+	at com.emotion.lib.Collection.selectCollection(Collection.java:46)
+	at com.emotion.tests.AssetOperationsTests.verifyExportMetadata(AssetOperationsTests.java:137)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div></td>
+<td>1</td>
+<td>com.emotion.tests.AssetOperationsTests@560b70a8</td></tr>
+<tr>
+<td title='com.emotion.tests.AssetOperationsTests.verifyMoveAsset()'><b>verifyMoveAsset</b><br>Test class: com.emotion.tests.AssetOperationsTests<br>Test method: TEST ID : 13 | moveAsset <br>Parameters: testCollection, 100061, imagetext, NewCollection, testCollectionTONewCollection, Automation Move task</td>
+<td><div><pre>com.emotion.core.FrameworkException: Collection not found: testCollection
+	at com.emotion.lib.Collection.selectCollection(Collection.java:46)
+	at com.emotion.tests.AssetOperationsTests.verifyMoveAsset(AssetOperationsTests.java:410)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1045294197", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1045294197'><pre>com.emotion.core.FrameworkException: Collection not found: testCollection
+	at com.emotion.lib.Collection.selectCollection(Collection.java:46)
+	at com.emotion.tests.AssetOperationsTests.verifyMoveAsset(AssetOperationsTests.java:410)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div></td>
+<td>1</td>
+<td>com.emotion.tests.AssetOperationsTests@560b70a8</td></tr>
+<tr>
+<td title='com.emotion.tests.AssetOperationsTests.verifyMoveAsset()'><b>verifyMoveAsset</b><br>Test class: com.emotion.tests.AssetOperationsTests<br>Test method: TEST ID : 13 | moveAsset <br>Parameters: Collection List, 100020, imagetext, NewCollection, CollectionListTONewCollection, Automation Move task2</td>
+<td><div><pre>com.emotion.core.FrameworkException: Collection not found: Collection List
+	at com.emotion.lib.Collection.selectCollection(Collection.java:46)
+	at com.emotion.tests.AssetOperationsTests.verifyMoveAsset(AssetOperationsTests.java:410)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1395980008", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1395980008'><pre>com.emotion.core.FrameworkException: Collection not found: Collection List
+	at com.emotion.lib.Collection.selectCollection(Collection.java:46)
+	at com.emotion.tests.AssetOperationsTests.verifyMoveAsset(AssetOperationsTests.java:410)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div></td>
+<td>1</td>
+<td>com.emotion.tests.AssetOperationsTests@560b70a8</td></tr>
+<tr>
+<td title='com.emotion.tests.AssetOperationsTests.verifyOrderAssets()'><b>verifyOrderAssets</b><br>Test class: com.emotion.tests.AssetOperationsTests<br>Test method: TEST ID : 5 | verifyOrderAssets <br>Parameters: test123, 100051,100055, imagetext, Web Ready, test, test6, test7, internal, email, testpro</td>
+<td><div><pre>com.emotion.core.FrameworkException: Collection not found: test123
+	at com.emotion.lib.Collection.selectCollection(Collection.java:46)
+	at com.emotion.tests.AssetOperationsTests.verifyOrderAssets(AssetOperationsTests.java:208)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1094365538", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1094365538'><pre>com.emotion.core.FrameworkException: Collection not found: test123
+	at com.emotion.lib.Collection.selectCollection(Collection.java:46)
+	at com.emotion.tests.AssetOperationsTests.verifyOrderAssets(AssetOperationsTests.java:208)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div></td>
+<td>1</td>
+<td>com.emotion.tests.AssetOperationsTests@560b70a8</td></tr>
+<tr>
+<td title='com.emotion.tests.AssetOperationsTests.verifyReindex()'><b>verifyReindex</b><br>Test class: com.emotion.tests.AssetOperationsTests<br>Test method: TEST ID : 10 | verifyReindex <br>Parameters: test123, 100051,100055, imagetext</td>
+<td><div><pre>com.emotion.core.FrameworkException: Collection not found: test123
+	at com.emotion.lib.Collection.selectCollection(Collection.java:46)
+	at com.emotion.tests.AssetOperationsTests.verifyReindex(AssetOperationsTests.java:319)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1352432084", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1352432084'><pre>com.emotion.core.FrameworkException: Collection not found: test123
+	at com.emotion.lib.Collection.selectCollection(Collection.java:46)
+	at com.emotion.tests.AssetOperationsTests.verifyReindex(AssetOperationsTests.java:319)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div></td>
+<td>1</td>
+<td>com.emotion.tests.AssetOperationsTests@560b70a8</td></tr>
+<tr>
+<td title='com.emotion.tests.AssetOperationsTests.verifyTransmitAsset()'><b>verifyTransmitAsset</b><br>Test class: com.emotion.tests.AssetOperationsTests<br>Test method: TEST ID : 2 | verifyTransmitAsset <br>Parameters: test123, 100051,100055, imagetext, bhavnakaranjekar@gmail.com, yes, Auto Subject, auto Message, , Power Point</td>
+<td><div><pre>com.emotion.core.FrameworkException: Collection not found: test123
+	at com.emotion.lib.Collection.selectCollection(Collection.java:46)
+	at com.emotion.tests.AssetOperationsTests.verifyTransmitAsset(AssetOperationsTests.java:92)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1877788934", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1877788934'><pre>com.emotion.core.FrameworkException: Collection not found: test123
+	at com.emotion.lib.Collection.selectCollection(Collection.java:46)
+	at com.emotion.tests.AssetOperationsTests.verifyTransmitAsset(AssetOperationsTests.java:92)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div></td>
+<td>1</td>
+<td>com.emotion.tests.AssetOperationsTests@560b70a8</td></tr>
+<tr>
+<td title='com.emotion.tests.AssetOperationsTests.verifyTransmitAsset()'><b>verifyTransmitAsset</b><br>Test class: com.emotion.tests.AssetOperationsTests<br>Test method: TEST ID : 2 | verifyTransmitAsset <br>Parameters: test123, 100051,100055, imagetext, bhavnakaranjekar, yes, Auto Subject, auto Message, , Power Point</td>
+<td><div><pre>com.emotion.core.FrameworkException: Collection not found: test123
+	at com.emotion.lib.Collection.selectCollection(Collection.java:46)
+	at com.emotion.tests.AssetOperationsTests.verifyTransmitAsset(AssetOperationsTests.java:92)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1323640221", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1323640221'><pre>com.emotion.core.FrameworkException: Collection not found: test123
+	at com.emotion.lib.Collection.selectCollection(Collection.java:46)
+	at com.emotion.tests.AssetOperationsTests.verifyTransmitAsset(AssetOperationsTests.java:92)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div></td>
+<td>1</td>
+<td>com.emotion.tests.AssetOperationsTests@560b70a8</td></tr>
+</table><p>
+</body>
+</html>

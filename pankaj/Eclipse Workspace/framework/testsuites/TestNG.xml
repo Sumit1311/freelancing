@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="MMOD Automation" parallel="none">
+	<listeners>
+		<listener class-name="com.emotion.core.TesngListener" />
+	</listeners>
+	
+<!-- 	<test name="Caption Type ">
+		<classes>
+			<class name="com.emotion.tests.CaptionTypeTests"/>
+		</classes>
+	</test>
+	
+	<test name="Collection Manager">
+		<classes>
+			<class name="com.emotion.tests.CollectionTests"/>
+		</classes>
+	</test> -->
+	
+	<test name="Asset Operations Tests">
+		<classes>
+			<class name="com.emotion.tests.AssetOperationsTests"/>
+		</classes>
+	</test>
+<!-- 	
+	<test name="Manage User ">
+		<classes>
+			<class name="com.emotion.tests.ManageUsersTests"/>
+		</classes>
+	</test>
+	
+	<test name="Manage User Roles">
+		<classes>
+			<class name="com.emotion.tests.ManageUserRoles"/>
+		</classes>
+	</test>
+	
+	<test name="Manage Organizations">
+		<classes>
+			<class name="com.emotion.tests.OrganizationTests"/>
+		</classes>
+	</test>
+	
+	<test name="MMOD Login tests">
+		<classes>
+			<class name="com.emotion.tests.LoginTests"/>
+		</classes>
+	</test>	 -->
+	
+</suite> 
